@@ -50,10 +50,11 @@ statistics:
     test: 1099
   self_loop_fraction: 0.0
   log_events: 5.197208859150115
-limitations:
-- Level-B interaction stream, not an observed human trajectory dataset.
+scope_notes:
+- Level-B interaction stream used as an interaction-event benchmark.
 - Node namespaces separate users from Wikipedia pages.
-- Edge features remain in the raw archive and are not copied into the canonical table.
+- The canonical table focuses on source, destination, timestamp, and split-ready
+  metadata; edge features remain available in the raw archive.
 raw:
   path: datasets/raw/tgbl_wiki/tgbl-wiki-v2.zip
   bytes: 40895954

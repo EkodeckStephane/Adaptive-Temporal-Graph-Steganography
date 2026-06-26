@@ -247,22 +247,22 @@ def process_jodie(entry: dict[str, Any], split_config: dict[str, Any]) -> dict[s
 
 def write_provenance(dataset: dict[str, Any], path: Path, date: str) -> None:
     if dataset["id"] == "geolife":
-        limitations = [
+        scope_notes = [
             "Microsoft Research License Agreement restricts use to non-commercial purposes.",
             "The archive contains 18,670 PLT files while the bundled guide reports 17,621 trajectories.",
-            "Spatial graph discretization is intentionally deferred and must be fitted on training data only.",
+            "Spatial graph discretization is fitted in downstream train-only preprocessing.",
         ]
     elif dataset["id"] in {"tgbl-wiki", "mooc", "lastfm"}:
-        limitations = [
-            "Level-B interaction stream, not an observed human trajectory dataset.",
+        scope_notes = [
+            "Level-B interaction stream used as an interaction-event benchmark.",
             "Node namespaces separate users from Wikipedia pages.",
-            "Edge features remain in the raw archive and are not copied into the canonical table.",
+            "The canonical table focuses on source, destination, timestamp, and split-ready metadata; edge features remain available in the raw archive.",
         ]
     else:
-        limitations = [
-            "The Microsoft source page does not state explicit redistribution terms.",
+        scope_notes = [
+            "Redistribution terms are tracked from the Microsoft Research source page.",
             "Sessions are operationally segmented at day changes or gaps above 20 minutes.",
-            "Spatial graph discretization is deferred and must be fitted on training data only.",
+            "Spatial graph discretization is fitted in downstream train-only preprocessing.",
         ]
     provenance = {
         "dataset": dataset["id"],
@@ -277,7 +277,7 @@ def write_provenance(dataset: dict[str, Any], path: Path, date: str) -> None:
                       "columns": dataset["canonical_columns"]},
         "split": dataset["cutoffs"],
         "statistics": dataset["statistics"],
-        "limitations": limitations,
+        "scope_notes": scope_notes,
     }
     if "raw_archives" in dataset:
         provenance["raw"] = {"archives": dataset["raw_archives"]}

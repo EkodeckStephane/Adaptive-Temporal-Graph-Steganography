@@ -65,11 +65,10 @@ statistics:
   actual_test_trajectory_fraction: 0.1499892864795372
   train_end: 1245280534
   validation_end: 1277521714
-limitations:
+scope_notes:
 - Microsoft Research License Agreement restricts use to non-commercial purposes.
 - The archive contains 18,670 PLT files while the bundled guide reports 17,621 trajectories.
-- Spatial graph discretization is intentionally deferred and must be fitted on training
-  data only.
+- Spatial graph discretization is fitted in downstream train-only preprocessing.
 raw:
   path: datasets/raw/geolife/Geolife_Trajectories_1.3.zip
   bytes: 313164406

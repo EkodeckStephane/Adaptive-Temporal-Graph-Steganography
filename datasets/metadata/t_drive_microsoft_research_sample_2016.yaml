@@ -73,10 +73,10 @@ statistics:
   actual_train_point_fraction: 0.7594112238621316
   actual_validation_point_fraction: 0.137354843489793
   actual_test_point_fraction: 0.10323393264807543
-limitations:
-- The Microsoft source page does not state explicit redistribution terms.
+scope_notes:
+- Redistribution terms are tracked from the Microsoft Research source page.
 - Sessions are operationally segmented at day changes or gaps above 20 minutes.
-- Spatial graph discretization is deferred and must be fitted on training data only.
+- Spatial graph discretization is fitted in downstream train-only preprocessing.
 raw:
   archives:
   - path: datasets/raw/t_drive/010.zip
