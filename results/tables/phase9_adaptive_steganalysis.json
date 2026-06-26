@@ -1,0 +1,340 @@
+{
+  "campaign": "phase9_adaptive_steganalysis",
+  "date": "2026-06-26",
+  "detectors": {
+    "tgbl-wiki": {
+      "temporal_graph_eve": {
+        "auc": 0.5194430859375,
+        "balanced_accuracy": 0.5150625,
+        "eer": 0.49049999999999994
+      },
+      "sequence_transformer_eve": {
+        "auc": 0.5292041484375001,
+        "balanced_accuracy": 0.51575,
+        "eer": 0.4831875
+      },
+      "bounded_white_box_gradient_boosting": {
+        "auc": 0.5657108984375,
+        "auc_ci_low": 0.5561830897273989,
+        "auc_ci_high": 0.574417704455943,
+        "balanced_accuracy": 0.5340625,
+        "eer": 0.4659375,
+        "feature_importance": {
+          "action_probability": 0.021663704930880007,
+          "surprise_bits": 0.017776621831307026,
+          "rank_fraction": 0.5677091950740517,
+          "is_top_action": 0.0003384175856599622,
+          "entropy_bits": 0.004722817322909569,
+          "top_probability": 0.0024309707780151633,
+          "candidate_count": 0.0005600656456311271,
+          "unseen_context": 9.436521610975049e-05,
+          "unseen_destination": 1.0578856033517393e-05,
+          "same_as_previous": 0.020166703048977875,
+          "self_loop": 0.0,
+          "log_inter_event_gap": 0.01703271828135213,
+          "encoder_capacity_bits": 0.0,
+          "encoder_tv_bound": 0.0027068804843428736,
+          "encoder_kl_bound": 0.007163143170431938,
+          "embedding_feasible": 0.3376238177742975
+        }
+      },
+      "oracle_leakage_gradient_boosting": {
+        "auc": 0.5805864921875,
+        "auc_ci_low": 0.5766256725653044,
+        "auc_ci_high": 0.5849695083694251,
+        "balanced_accuracy": 0.5420625,
+        "eer": 0.4579375,
+        "feature_importance": {
+          "action_probability": 1.6208061404060958e-13,
+          "surprise_bits": 5.2399255069404144e-14,
+          "rank_fraction": 1.5964430812326705e-14,
+          "is_top_action": 0.0,
+          "entropy_bits": 2.32311658286511e-13,
+          "top_probability": 2.143485644254065e-13,
+          "candidate_count": 5.67362666882418e-14,
+          "unseen_context": 0.0,
+          "unseen_destination": 0.0,
+          "same_as_previous": 1.1546919324853804e-16,
+          "self_loop": 0.0,
+          "log_inter_event_gap": 1.9796276970107656e-12,
+          "encoder_capacity_bits": 0.0,
+          "encoder_tv_bound": 1.5636268488769493e-13,
+          "encoder_kl_bound": 2.4637028508387294e-13,
+          "embedding_feasible": 0.4613157363125579,
+          "bits_consumed": 0.5386842636841978,
+          "local_total_variation": 1.164867854352055e-13,
+          "local_kl_bits": 1.1488294600765965e-14
+        }
+      }
+    },
+    "mooc": {
+      "temporal_graph_eve": {
+        "auc": 0.5001866484374999,
+        "balanced_accuracy": 0.5001875,
+        "eer": 0.499875
+      },
+      "sequence_transformer_eve": {
+        "auc": 0.4998985156250001,
+        "balanced_accuracy": 0.4999375,
+        "eer": 0.5000625
+      },
+      "bounded_white_box_gradient_boosting": {
+        "auc": 0.5008746171874998,
+        "auc_ci_low": 0.5004395026103828,
+        "auc_ci_high": 0.5014405182851389,
+        "balanced_accuracy": 0.5004375,
+        "eer": 0.4995625,
+        "feature_importance": {
+          "action_probability": 0.2700297617730604,
+          "surprise_bits": 0.5381744770043609,
+          "rank_fraction": 0.07758149336841519,
+          "is_top_action": 0.0,
+          "entropy_bits": 2.382190651551731e-13,
+          "top_probability": 1.0278337229335414e-14,
+          "candidate_count": 3.484875047967784e-13,
+          "unseen_context": 0.0,
+          "unseen_destination": 2.3603291770646626e-17,
+          "same_as_previous": 0.0,
+          "self_loop": 0.0,
+          "log_inter_event_gap": 3.410755598099089e-13,
+          "encoder_capacity_bits": -3.387969312368918e-15,
+          "encoder_tv_bound": 3.713193377364809e-13,
+          "encoder_kl_bound": 1.4040212160501472e-13,
+          "embedding_feasible": 0.11421426785271711
+        }
+      },
+      "oracle_leakage_gradient_boosting": {
+        "auc": 0.5008746171875,
+        "auc_ci_low": 0.5004998155673273,
+        "auc_ci_high": 0.5014975782532284,
+        "balanced_accuracy": 0.5004375,
+        "eer": 0.4995625,
+        "feature_importance": {
+          "action_probability": 6.947122611256211e-14,
+          "surprise_bits": 7.923405604961028e-13,
+          "rank_fraction": 1.1309550387789349e-13,
+          "is_top_action": 0.0,
+          "entropy_bits": 5.559145763700944e-13,
+          "top_probability": 1.5942463526516086e-13,
+          "candidate_count": 2.519372164223034e-13,
+          "unseen_context": 0.0,
+          "unseen_destination": 2.671821977364292e-13,
+          "same_as_previous": 0.0,
+          "self_loop": 0.0,
+          "log_inter_event_gap": 6.586150519123224e-14,
+          "encoder_capacity_bits": 0.0,
+          "encoder_tv_bound": 3.648916107362444e-13,
+          "encoder_kl_bound": 4.4529920522755203e-13,
+          "embedding_feasible": 0.49978115425332253,
+          "bits_consumed": 0.06354404143736006,
+          "local_total_variation": 0.054879731377477294,
+          "local_kl_bits": 0.3817950729287547
+        }
+      }
+    },
+    "lastfm": {
+      "temporal_graph_eve": {
+        "auc": 0.4999999921875001,
+        "balanced_accuracy": 0.5,
+        "eer": 0.5
+      },
+      "sequence_transformer_eve": {
+        "auc": 0.49999999999999994,
+        "balanced_accuracy": 0.5,
+        "eer": 0.5
+      },
+      "bounded_white_box_gradient_boosting": {
+        "auc": 0.5,
+        "auc_ci_low": 0.5,
+        "auc_ci_high": 0.5,
+        "balanced_accuracy": 0.5,
+        "eer": 0.5,
+        "feature_importance": {
+          "action_probability": 0.16221886995219595,
+          "surprise_bits": 0.1902277355454202,
+          "rank_fraction": 2.0015029206212802e-14,
+          "is_top_action": 0.0,
+          "entropy_bits": 1.8003815447098427e-13,
+          "top_probability": 1.0939174957852129e-13,
+          "candidate_count": 0.0,
+          "unseen_context": 3.097952892349527e-14,
+          "unseen_destination": 0.0,
+          "same_as_previous": 0.0,
+          "self_loop": 0.0,
+          "log_inter_event_gap": 1.2422147503682098e-12,
+          "encoder_capacity_bits": 0.0,
+          "encoder_tv_bound": 7.579214559311555e-16,
+          "encoder_kl_bound": 0.0,
+          "embedding_feasible": 0.6475533945008005
+        }
+      },
+      "oracle_leakage_gradient_boosting": {
+        "auc": 0.5,
+        "auc_ci_low": 0.5,
+        "auc_ci_high": 0.5,
+        "balanced_accuracy": 0.5,
+        "eer": 0.5,
+        "feature_importance": {
+          "action_probability": 8.305171435902854e-13,
+          "surprise_bits": 3.111817920856767e-13,
+          "rank_fraction": 1.7908453627340596e-13,
+          "is_top_action": 4.329800782169875e-13,
+          "entropy_bits": 1.4052095237880325e-13,
+          "top_probability": 5.223560151752688e-13,
+          "candidate_count": 5.771974415170737e-14,
+          "unseen_context": 3.424030154868734e-17,
+          "unseen_destination": 0.0,
+          "same_as_previous": 0.0,
+          "self_loop": 0.0,
+          "log_inter_event_gap": 3.969066468619695e-12,
+          "encoder_capacity_bits": 0.0,
+          "encoder_tv_bound": 1.1568571207495229e-13,
+          "encoder_kl_bound": 7.239224120350802e-14,
+          "embedding_feasible": 0.49940554408025295,
+          "bits_consumed": 0.06359175613081824,
+          "local_total_variation": 0.054920940111648366,
+          "local_kl_bits": 0.3820817596706488
+        }
+      }
+    },
+    "geolife_cells": {
+      "temporal_graph_eve": {
+        "auc": 0.5,
+        "balanced_accuracy": 0.5,
+        "eer": 0.5
+      },
+      "sequence_transformer_eve": {
+        "auc": 0.5,
+        "balanced_accuracy": 0.5,
+        "eer": 0.5
+      },
+      "bounded_white_box_gradient_boosting": {
+        "auc": 0.5,
+        "auc_ci_low": 0.49031091982580627,
+        "auc_ci_high": 0.5088887882128833,
+        "balanced_accuracy": 0.5,
+        "eer": 0.5,
+        "feature_importance": {
+          "action_probability": 0.0005718120145438085,
+          "surprise_bits": 0.0008059471342276758,
+          "rank_fraction": 0.0001798278732956741,
+          "is_top_action": 0.00043095268959575416,
+          "entropy_bits": 0.0001292336686881005,
+          "top_probability": 0.0001527907346990988,
+          "candidate_count": 6.683707609614344e-08,
+          "unseen_context": 1.0632445955748086e-08,
+          "unseen_destination": -7.281270240549258e-17,
+          "same_as_previous": 0.00025456732697802905,
+          "self_loop": 0.038884351201949136,
+          "log_inter_event_gap": 0.31061668325906616,
+          "encoder_capacity_bits": 0.0,
+          "encoder_tv_bound": 0.0002488794981028093,
+          "encoder_kl_bound": 0.0003140951012362832,
+          "embedding_feasible": 0.6474107820280954
+        }
+      },
+      "oracle_leakage_gradient_boosting": {
+        "auc": 0.5009994999999999,
+        "auc_ci_low": 0.500563662247879,
+        "auc_ci_high": 0.5015004749721155,
+        "balanced_accuracy": 0.5005,
+        "eer": 0.4995,
+        "feature_importance": {
+          "action_probability": 0.0,
+          "surprise_bits": 4.610481574530327e-14,
+          "rank_fraction": 2.4385418227539604e-15,
+          "is_top_action": 2.3201994663114154e-13,
+          "entropy_bits": 0.0,
+          "top_probability": 5.6145478114995175e-14,
+          "candidate_count": 0.0,
+          "unseen_context": 0.0,
+          "unseen_destination": 0.0,
+          "same_as_previous": 2.522937082011962e-17,
+          "self_loop": 1.2847048207004765e-13,
+          "log_inter_event_gap": 3.645194995930873e-12,
+          "encoder_capacity_bits": 0.0,
+          "encoder_tv_bound": 0.0,
+          "encoder_kl_bound": 2.6984475778569364e-14,
+          "embedding_feasible": 0.49862120832084444,
+          "bits_consumed": 0.1516971358586262,
+          "local_total_variation": 0.05468112892945711,
+          "local_kl_bits": 0.29500052688693496
+        }
+      }
+    },
+    "t_drive_cells": {
+      "temporal_graph_eve": {
+        "auc": 0.50033684375,
+        "balanced_accuracy": 0.498625,
+        "eer": 0.5
+      },
+      "sequence_transformer_eve": {
+        "auc": 0.4996386640625,
+        "balanced_accuracy": 0.5008125,
+        "eer": 0.500375
+      },
+      "bounded_white_box_gradient_boosting": {
+        "auc": 0.5360763046875,
+        "auc_ci_low": 0.5271990800432109,
+        "auc_ci_high": 0.5444022235611224,
+        "balanced_accuracy": 0.5185625,
+        "eer": 0.4814375,
+        "feature_importance": {
+          "action_probability": 0.09904887669057982,
+          "surprise_bits": 0.07248181663589527,
+          "rank_fraction": 0.3123242648678389,
+          "is_top_action": 0.003586322370900275,
+          "entropy_bits": 0.020896992072744147,
+          "top_probability": 0.010540312678700859,
+          "candidate_count": 0.01623366893921517,
+          "unseen_context": 0.0001514080357721795,
+          "unseen_destination": 5.615452520708055e-07,
+          "same_as_previous": 0.011675350235412836,
+          "self_loop": 0.0999455782364921,
+          "log_inter_event_gap": 0.09389778324803626,
+          "encoder_capacity_bits": 3.783008737599027e-06,
+          "encoder_tv_bound": 0.012711104437111355,
+          "encoder_kl_bound": 0.014255355850980074,
+          "embedding_feasible": 0.2322468211463312
+        }
+      },
+      "oracle_leakage_gradient_boosting": {
+        "auc": 0.5915049921875,
+        "auc_ci_low": 0.5875423082329785,
+        "auc_ci_high": 0.5953442122930457,
+        "balanced_accuracy": 0.5480625,
+        "eer": 0.4519375,
+        "feature_importance": {
+          "action_probability": 2.2702562996674802e-13,
+          "surprise_bits": 4.961051889001958e-13,
+          "rank_fraction": 5.994687702102131e-14,
+          "is_top_action": 0.0,
+          "entropy_bits": 5.216210429269702e-13,
+          "top_probability": 5.661879049802589e-13,
+          "candidate_count": 5.786558996373499e-14,
+          "unseen_context": 0.0,
+          "unseen_destination": 0.0,
+          "same_as_previous": 0.0,
+          "self_loop": 3.254496805068194e-15,
+          "log_inter_event_gap": 3.664319489239592e-13,
+          "encoder_capacity_bits": 0.0,
+          "encoder_tv_bound": 1.4214106051459727e-13,
+          "encoder_kl_bound": 4.996678790408176e-13,
+          "embedding_feasible": 0.47930226503359796,
+          "bits_consumed": 0.5206977349631687,
+          "local_total_variation": 1.437756764711255e-13,
+          "local_kl_bits": 1.4935102428701012e-13
+        }
+      }
+    }
+  },
+  "training": {
+    "context_length": 8,
+    "embedding_dim": 24,
+    "hidden_dim": 48,
+    "epochs": 2,
+    "batch_size": 256,
+    "learning_rate": 0.003,
+    "seed": 20260626
+  }
+}

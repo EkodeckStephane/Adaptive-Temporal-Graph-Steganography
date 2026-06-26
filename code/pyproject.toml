@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=70", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "adaptive-graph-stego"
+version = "0.1.0"
+description = "Adaptive temporal graph traversal steganography research code"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=2.0,<3",
+    "pandas>=2.2,<3",
+    "scipy>=1.13,<2",
+    "scikit-learn>=1.5,<2",
+    "networkx>=3.3,<4",
+    "bitstring>=4.2,<5",
+    "pyyaml>=6.0,<7",
+    "matplotlib>=3.9,<4",
+    "seaborn>=0.13,<1",
+    "tqdm>=4.66,<5",
+    "torch>=2.4",
+    "torch-geometric>=2.6",
+    "py-tgb>=2.2,<3",
+    "pyarrow>=17,<24",
+    "scikit-fuzzy>=0.5",
+    "reedsolo>=1.7",
+    "cryptography>=43",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"

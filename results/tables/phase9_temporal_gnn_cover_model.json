@@ -1,0 +1,161 @@
+{
+  "campaign": "phase9_temporal_gnn_cover_model",
+  "date": "2026-06-26",
+  "training": {
+    "embedding_dim": 32,
+    "hidden_dim": 64,
+    "epochs": 20,
+    "batch_size": 256,
+    "learning_rate": 0.003,
+    "seed": 20260626,
+    "patience": 5,
+    "dropout": 0.2
+  },
+  "datasets": {
+    "tgbl-wiki": {
+      "train": {
+        "rows": 20000,
+        "mean_nll_bits": 6.853684902191162,
+        "perplexity": 115.65508613545855,
+        "top1_accuracy": 0.51265,
+        "unknown_target_fraction": 0.0,
+        "expected_calibration_error": 0.4936722461819649,
+        "brier_score": 0.9670287370681763
+      },
+      "validation": {
+        "rows": 20000,
+        "mean_nll_bits": 9.440654754638672,
+        "perplexity": 694.896716950868,
+        "top1_accuracy": 0.06695,
+        "unknown_target_fraction": 0.4513,
+        "expected_calibration_error": 0.058544311781227584,
+        "brier_score": 0.9937050938606262
+      },
+      "test": {
+        "rows": 20000,
+        "mean_nll_bits": 9.425080299377441,
+        "perplexity": 687.435382521993,
+        "top1_accuracy": 0.05935,
+        "unknown_target_fraction": 0.4368,
+        "expected_calibration_error": 0.051244143633544445,
+        "brier_score": 0.9938297867774963
+      }
+    },
+    "mooc": {
+      "train": {
+        "rows": 20000,
+        "mean_nll_bits": 3.427004337310791,
+        "perplexity": 10.755512288488037,
+        "top1_accuracy": 0.4714,
+        "unknown_target_fraction": 0.0,
+        "expected_calibration_error": 0.35967910764329136,
+        "brier_score": 0.8148308992385864
+      },
+      "validation": {
+        "rows": 20000,
+        "mean_nll_bits": 5.426978588104248,
+        "perplexity": 43.02128130370495,
+        "top1_accuracy": 0.0482,
+        "unknown_target_fraction": 0.82245,
+        "expected_calibration_error": 0.06271320351958275,
+        "brier_score": 0.9448429942131042
+      },
+      "test": {
+        "rows": 20000,
+        "mean_nll_bits": 5.429461479187012,
+        "perplexity": 43.09538506235192,
+        "top1_accuracy": 0.0497,
+        "unknown_target_fraction": 0.8268,
+        "expected_calibration_error": 0.061397547779604794,
+        "brier_score": 0.9446539282798767
+      }
+    },
+    "lastfm": {
+      "train": {
+        "rows": 20000,
+        "mean_nll_bits": 8.99553108215332,
+        "perplexity": 510.4164735296304,
+        "top1_accuracy": 0.0679,
+        "unknown_target_fraction": 0.0,
+        "expected_calibration_error": 0.0647317982275039,
+        "brier_score": 0.9957554936408997
+      },
+      "validation": {
+        "rows": 20000,
+        "mean_nll_bits": 9.371986389160156,
+        "perplexity": 662.5963239231214,
+        "top1_accuracy": 0.0062,
+        "unknown_target_fraction": 0.4144,
+        "expected_calibration_error": 0.003737549119442701,
+        "brier_score": 0.9969433546066284
+      },
+      "test": {
+        "rows": 20000,
+        "mean_nll_bits": 9.37954330444336,
+        "perplexity": 666.0761453849867,
+        "top1_accuracy": 0.00465,
+        "unknown_target_fraction": 0.4735,
+        "expected_calibration_error": 0.0022134678266942497,
+        "brier_score": 0.9969660043716431
+      }
+    },
+    "geolife_cells": {
+      "train": {
+        "rows": 20000,
+        "mean_nll_bits": 0.2356632947921753,
+        "perplexity": 1.177447957343627,
+        "top1_accuracy": 0.9757,
+        "unknown_target_fraction": 0.0,
+        "expected_calibration_error": 0.024676960123330326,
+        "brier_score": 0.03153190389275551
+      },
+      "validation": {
+        "rows": 20000,
+        "mean_nll_bits": 0.3815156817436218,
+        "perplexity": 1.3027097512913266,
+        "top1_accuracy": 0.956,
+        "unknown_target_fraction": 0.0273,
+        "expected_calibration_error": 0.027058880623429968,
+        "brier_score": 0.04488963261246681
+      },
+      "test": {
+        "rows": 20000,
+        "mean_nll_bits": 1.740496277809143,
+        "perplexity": 3.3415009348499116,
+        "top1_accuracy": 0.7955,
+        "unknown_target_fraction": 0.2002,
+        "expected_calibration_error": 0.1658204244613648,
+        "brier_score": 0.23649196326732635
+      }
+    },
+    "t_drive_cells": {
+      "train": {
+        "rows": 20000,
+        "mean_nll_bits": 5.609950065612793,
+        "perplexity": 48.838604261587975,
+        "top1_accuracy": 0.4566,
+        "unknown_target_fraction": 0.0,
+        "expected_calibration_error": 0.23815309888217598,
+        "brier_score": 0.7148774266242981
+      },
+      "validation": {
+        "rows": 20000,
+        "mean_nll_bits": 9.02463436126709,
+        "perplexity": 520.8175888599774,
+        "top1_accuracy": 0.1499,
+        "unknown_target_fraction": 0.45355,
+        "expected_calibration_error": 0.07915330912512729,
+        "brier_score": 0.916135847568512
+      },
+      "test": {
+        "rows": 20000,
+        "mean_nll_bits": 9.070566177368164,
+        "perplexity": 537.6659045075255,
+        "top1_accuracy": 0.14585,
+        "unknown_target_fraction": 0.48005,
+        "expected_calibration_error": 0.07773695679847151,
+        "brier_score": 0.9175638556480408
+      }
+    }
+  }
+}

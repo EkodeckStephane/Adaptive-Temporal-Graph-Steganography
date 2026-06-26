@@ -1,0 +1,27 @@
+campaign: phase4_temporal_cover_model
+date: 2026-06-24
+datasets:
+  - tgbl-wiki
+  - mooc
+  - lastfm
+  - geolife_cells
+  - t_drive_cells
+event_datasets:
+  - id: geolife_cells
+    processed_path: datasets/processed/geolife_cells/events.parquet
+  - id: t_drive_cells
+    processed_path: datasets/processed/t_drive_cells/events.parquet
+max_rows_per_split: 100000
+model:
+  name: temporal_source_previous_destination_backoff
+  prior_strength: 8.0
+  top_k: 32
+evaluation:
+  task: causal_next_destination_probability
+  metrics:
+    - mean_nll_bits
+    - perplexity
+    - top1_accuracy
+    - mean_entropy_bits
+    - unseen_context_fraction
+    - unseen_destination_fraction

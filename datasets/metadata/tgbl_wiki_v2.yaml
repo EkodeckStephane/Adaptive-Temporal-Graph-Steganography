@@ -1,0 +1,60 @@
+dataset: tgbl-wiki
+version: v2
+retrieved_on: '2026-06-13'
+source_url: https://object-arbutus.cloud.computecanada.ca/tgb/tgbl-wiki-v2.zip
+license: MIT
+level: B
+observed_trajectories: false
+processed:
+  path: datasets/processed/tgbl_wiki/events.parquet
+  script: code/scripts/run_phase3_data_pipeline.py
+  columns:
+  - event_id
+  - source
+  - destination
+  - timestamp
+  - label
+  - sequence_id
+  - split
+  bytes: 1357379
+  sha256: 596c45556ef08ad161764cc2d062055e4c5c11751449389273b51459b2de1d15
+split:
+  train_end: 1862652.0
+  validation_end: 2218288.0
+  actual_train_fraction: 0.700001270050929
+  actual_validation_fraction: 0.14999936497453548
+  actual_test_fraction: 0.14999936497453548
+  tie_policy: same_timestamp_same_split
+statistics:
+  events: 157474
+  nodes: 9227
+  sources: 8227
+  destinations: 1000
+  unique_directed_edges: 18257
+  repeated_edge_fraction: 0.8840634009423778
+  exact_duplicate_fraction: 0.0
+  reciprocal_edge_fraction: 0.0
+  destination_entropy_bits: 9.682640977519464
+  conditional_destination_entropy_bits: 1.197076621533923
+  effective_branching_factor: 2.2927461359710306
+  global_inter_event_burstiness: 0.039496681666175225
+  median_source_burstiness: 0.18593406671768586
+  timestamp_min: 0.0
+  timestamp_max: 2678373.0
+  split_counts:
+    train: 110232
+    validation: 23621
+    test: 23621
+  cold_start_nodes:
+    validation: 836
+    test: 1099
+  self_loop_fraction: 0.0
+  log_events: 5.197208859150115
+limitations:
+- Level-B interaction stream, not an observed human trajectory dataset.
+- Node namespaces separate users from Wikipedia pages.
+- Edge features remain in the raw archive and are not copied into the canonical table.
+raw:
+  path: datasets/raw/tgbl_wiki/tgbl-wiki-v2.zip
+  bytes: 40895954
+  sha256: 1b6c756b4dc0bac9d1f97218467949472daf5b1eebe497f38721493682fdd130

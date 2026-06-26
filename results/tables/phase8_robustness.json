@@ -1,0 +1,763 @@
+{
+  "campaign": "phase8_robustness_and_ablations",
+  "date": "2026-06-26",
+  "robustness": {
+    "tgbl-wiki": {
+      "linear": {
+        "none": {
+          "auc": 0.55616907,
+          "balanced_accuracy": 0.53155,
+          "eer": 0.4688
+        },
+        "subsample_80": {
+          "auc": 0.55722846875,
+          "balanced_accuracy": 0.5330625,
+          "eer": 0.468125
+        },
+        "truncate_50": {
+          "auc": 0.57016174,
+          "balanced_accuracy": 0.5388000000000001,
+          "eer": 0.4616
+        },
+        "timestamp_noise": {
+          "auc": 0.556153475,
+          "balanced_accuracy": 0.53155,
+          "eer": 0.46804999999999997
+        }
+      },
+      "forest": {
+        "none": {
+          "auc": 0.575789135,
+          "balanced_accuracy": 0.53975,
+          "eer": 0.46025
+        },
+        "subsample_80": {
+          "auc": 0.5757879765625,
+          "balanced_accuracy": 0.5404375,
+          "eer": 0.461125
+        },
+        "truncate_50": {
+          "auc": 0.5904688,
+          "balanced_accuracy": 0.5477,
+          "eer": 0.4523
+        },
+        "timestamp_noise": {
+          "auc": 0.5740909200000001,
+          "balanced_accuracy": 0.53825,
+          "eer": 0.46114999999999995
+        }
+      },
+      "mlp": {
+        "none": {
+          "auc": 0.57547823,
+          "balanced_accuracy": 0.5398499999999999,
+          "eer": 0.46014999999999995
+        },
+        "subsample_80": {
+          "auc": 0.575782015625,
+          "balanced_accuracy": 0.5400625,
+          "eer": 0.45875
+        },
+        "truncate_50": {
+          "auc": 0.59027432,
+          "balanced_accuracy": 0.5478000000000001,
+          "eer": 0.45220000000000005
+        },
+        "timestamp_noise": {
+          "auc": 0.57547445,
+          "balanced_accuracy": 0.5398000000000001,
+          "eer": 0.4606
+        }
+      }
+    },
+    "mooc": {
+      "linear": {
+        "none": {
+          "auc": 0.500692375,
+          "balanced_accuracy": 0.50035,
+          "eer": 0.49965000000000004
+        },
+        "subsample_80": {
+          "auc": 0.5008637031250001,
+          "balanced_accuracy": 0.5015000000000001,
+          "eer": 0.4994375
+        },
+        "truncate_50": {
+          "auc": 0.50078536,
+          "balanced_accuracy": 0.5004000000000001,
+          "eer": 0.4996
+        },
+        "timestamp_noise": {
+          "auc": 0.50049752,
+          "balanced_accuracy": 0.4998,
+          "eer": 0.501
+        }
+      },
+      "forest": {
+        "none": {
+          "auc": 0.5006054550000001,
+          "balanced_accuracy": 0.5003,
+          "eer": 0.4997
+        },
+        "subsample_80": {
+          "auc": 0.4980815390625,
+          "balanced_accuracy": 0.49849999999999994,
+          "eer": 0.5015624999999999
+        },
+        "truncate_50": {
+          "auc": 0.50061316,
+          "balanced_accuracy": 0.5003,
+          "eer": 0.49970000000000003
+        },
+        "timestamp_noise": {
+          "auc": 0.49981755499999997,
+          "balanced_accuracy": 0.5017,
+          "eer": 0.4979
+        }
+      },
+      "mlp": {
+        "none": {
+          "auc": 0.500699145,
+          "balanced_accuracy": 0.50035,
+          "eer": 0.4996499999999999
+        },
+        "subsample_80": {
+          "auc": 0.49738035156249993,
+          "balanced_accuracy": 0.4968125,
+          "eer": 0.501125
+        },
+        "truncate_50": {
+          "auc": 0.5007990400000001,
+          "balanced_accuracy": 0.5004,
+          "eer": 0.4996
+        },
+        "timestamp_noise": {
+          "auc": 0.50110145,
+          "balanced_accuracy": 0.5001,
+          "eer": 0.5012
+        }
+      }
+    },
+    "lastfm": {
+      "linear": {
+        "none": {
+          "auc": 0.5001046199999999,
+          "balanced_accuracy": 0.50005,
+          "eer": 0.49995
+        },
+        "subsample_80": {
+          "auc": 0.5029543828125,
+          "balanced_accuracy": 0.500625,
+          "eer": 0.498375
+        },
+        "truncate_50": {
+          "auc": 0.50000774,
+          "balanced_accuracy": 0.5,
+          "eer": 0.5
+        },
+        "timestamp_noise": {
+          "auc": 0.50000522,
+          "balanced_accuracy": 0.5001,
+          "eer": 0.5009
+        }
+      },
+      "forest": {
+        "none": {
+          "auc": 0.50010087,
+          "balanced_accuracy": 0.50005,
+          "eer": 0.49995
+        },
+        "subsample_80": {
+          "auc": 0.5014267578125,
+          "balanced_accuracy": 0.5011875,
+          "eer": 0.497875
+        },
+        "truncate_50": {
+          "auc": 0.5001999800000001,
+          "balanced_accuracy": 0.5001,
+          "eer": 0.4999
+        },
+        "timestamp_noise": {
+          "auc": 0.50079067,
+          "balanced_accuracy": 0.50005,
+          "eer": 0.50095
+        }
+      },
+      "mlp": {
+        "none": {
+          "auc": 0.50000299,
+          "balanced_accuracy": 0.5,
+          "eer": 0.5
+        },
+        "subsample_80": {
+          "auc": 0.500207890625,
+          "balanced_accuracy": 0.5008125,
+          "eer": 0.49924999999999997
+        },
+        "truncate_50": {
+          "auc": 0.50000036,
+          "balanced_accuracy": 0.5,
+          "eer": 0.5
+        },
+        "timestamp_noise": {
+          "auc": 0.49901658000000004,
+          "balanced_accuracy": 0.4998,
+          "eer": 0.50375
+        }
+      }
+    },
+    "geolife_cells": {
+      "linear": {
+        "none": {
+          "auc": 0.50019948,
+          "balanced_accuracy": 0.5001,
+          "eer": 0.4999
+        },
+        "subsample_80": {
+          "auc": 0.49795928125000005,
+          "balanced_accuracy": 0.49774999999999997,
+          "eer": 0.501625
+        },
+        "truncate_50": {
+          "auc": 0.5,
+          "balanced_accuracy": 0.5,
+          "eer": 0.5
+        },
+        "timestamp_noise": {
+          "auc": 0.50107904,
+          "balanced_accuracy": 0.49934999999999996,
+          "eer": 0.4981
+        }
+      },
+      "forest": {
+        "none": {
+          "auc": 0.5001003300000001,
+          "balanced_accuracy": 0.50005,
+          "eer": 0.49995
+        },
+        "subsample_80": {
+          "auc": 0.4986585390625001,
+          "balanced_accuracy": 0.49924999999999997,
+          "eer": 0.5006875
+        },
+        "truncate_50": {
+          "auc": 0.4999999999999999,
+          "balanced_accuracy": 0.5,
+          "eer": 0.5
+        },
+        "timestamp_noise": {
+          "auc": 0.502454875,
+          "balanced_accuracy": 0.5017,
+          "eer": 0.49705
+        }
+      },
+      "mlp": {
+        "none": {
+          "auc": 0.500169315,
+          "balanced_accuracy": 0.5001,
+          "eer": 0.4999
+        },
+        "subsample_80": {
+          "auc": 0.49948932031250004,
+          "balanced_accuracy": 0.49943750000000003,
+          "eer": 0.5005
+        },
+        "truncate_50": {
+          "auc": 0.50003802,
+          "balanced_accuracy": 0.5,
+          "eer": 0.5
+        },
+        "timestamp_noise": {
+          "auc": 0.49755671,
+          "balanced_accuracy": 0.4976,
+          "eer": 0.5035000000000001
+        }
+      }
+    },
+    "t_drive_cells": {
+      "linear": {
+        "none": {
+          "auc": 0.532556255,
+          "balanced_accuracy": 0.5185,
+          "eer": 0.48164999999999997
+        },
+        "subsample_80": {
+          "auc": 0.5331936171875,
+          "balanced_accuracy": 0.5201875,
+          "eer": 0.4801875
+        },
+        "truncate_50": {
+          "auc": 0.5328383999999999,
+          "balanced_accuracy": 0.5186,
+          "eer": 0.4814
+        },
+        "timestamp_noise": {
+          "auc": 0.53224297,
+          "balanced_accuracy": 0.5185500000000001,
+          "eer": 0.48250000000000004
+        }
+      },
+      "forest": {
+        "none": {
+          "auc": 0.536801105,
+          "balanced_accuracy": 0.51905,
+          "eer": 0.481
+        },
+        "subsample_80": {
+          "auc": 0.5344461953125,
+          "balanced_accuracy": 0.5186875,
+          "eer": 0.48168750000000005
+        },
+        "truncate_50": {
+          "auc": 0.5376690999999999,
+          "balanced_accuracy": 0.5195,
+          "eer": 0.4805
+        },
+        "timestamp_noise": {
+          "auc": 0.5369651799999999,
+          "balanced_accuracy": 0.5189,
+          "eer": 0.4808
+        }
+      },
+      "mlp": {
+        "none": {
+          "auc": 0.53608448,
+          "balanced_accuracy": 0.5188999999999999,
+          "eer": 0.48105
+        },
+        "subsample_80": {
+          "auc": 0.5333883203124999,
+          "balanced_accuracy": 0.515625,
+          "eer": 0.48325
+        },
+        "truncate_50": {
+          "auc": 0.53689652,
+          "balanced_accuracy": 0.5197,
+          "eer": 0.4806
+        },
+        "timestamp_noise": {
+          "auc": 0.535409515,
+          "balanced_accuracy": 0.5195,
+          "eer": 0.48329999999999995
+        }
+      }
+    }
+  },
+  "ablations": {
+    "tgbl-wiki": {
+      "linear": {
+        "full": {
+          "auc": 0.55616907,
+          "balanced_accuracy": 0.53155,
+          "eer": 0.4688
+        },
+        "no_probability": {
+          "auc": 0.53766788,
+          "balanced_accuracy": 0.52415,
+          "eer": 0.47609999999999997
+        },
+        "no_entropy": {
+          "auc": 0.5613648600000001,
+          "balanced_accuracy": 0.53565,
+          "eer": 0.46445000000000003
+        },
+        "no_cold_start": {
+          "auc": 0.555321445,
+          "balanced_accuracy": 0.5308999999999999,
+          "eer": 0.469
+        },
+        "no_temporal": {
+          "auc": 0.552312315,
+          "balanced_accuracy": 0.5293,
+          "eer": 0.4707
+        }
+      },
+      "forest": {
+        "full": {
+          "auc": 0.575789135,
+          "balanced_accuracy": 0.53975,
+          "eer": 0.46025
+        },
+        "no_probability": {
+          "auc": 0.5628874349999999,
+          "balanced_accuracy": 0.5329,
+          "eer": 0.4671
+        },
+        "no_entropy": {
+          "auc": 0.57539715,
+          "balanced_accuracy": 0.54015,
+          "eer": 0.45985
+        },
+        "no_cold_start": {
+          "auc": 0.5749993,
+          "balanced_accuracy": 0.5392,
+          "eer": 0.4608
+        },
+        "no_temporal": {
+          "auc": 0.574657845,
+          "balanced_accuracy": 0.5391,
+          "eer": 0.4609
+        }
+      },
+      "mlp": {
+        "full": {
+          "auc": 0.57547823,
+          "balanced_accuracy": 0.5398499999999999,
+          "eer": 0.46014999999999995
+        },
+        "no_probability": {
+          "auc": 0.56154762,
+          "balanced_accuracy": 0.5325,
+          "eer": 0.46745000000000003
+        },
+        "no_entropy": {
+          "auc": 0.570597215,
+          "balanced_accuracy": 0.53825,
+          "eer": 0.46185
+        },
+        "no_cold_start": {
+          "auc": 0.5743280100000001,
+          "balanced_accuracy": 0.53905,
+          "eer": 0.46095
+        },
+        "no_temporal": {
+          "auc": 0.5729461600000001,
+          "balanced_accuracy": 0.53885,
+          "eer": 0.46194999999999997
+        }
+      }
+    },
+    "mooc": {
+      "linear": {
+        "full": {
+          "auc": 0.500692375,
+          "balanced_accuracy": 0.50035,
+          "eer": 0.49965000000000004
+        },
+        "no_probability": {
+          "auc": 0.5003,
+          "balanced_accuracy": 0.5003,
+          "eer": 0.4997
+        },
+        "no_entropy": {
+          "auc": 0.50041807,
+          "balanced_accuracy": 0.5002,
+          "eer": 0.4998
+        },
+        "no_cold_start": {
+          "auc": 0.500580585,
+          "balanced_accuracy": 0.5003,
+          "eer": 0.4997
+        },
+        "no_temporal": {
+          "auc": 0.5006926650000001,
+          "balanced_accuracy": 0.50035,
+          "eer": 0.49965
+        }
+      },
+      "forest": {
+        "full": {
+          "auc": 0.5006054550000001,
+          "balanced_accuracy": 0.5003,
+          "eer": 0.4997
+        },
+        "no_probability": {
+          "auc": 0.5003828050000001,
+          "balanced_accuracy": 0.5002,
+          "eer": 0.4998
+        },
+        "no_entropy": {
+          "auc": 0.50069893,
+          "balanced_accuracy": 0.50035,
+          "eer": 0.49965
+        },
+        "no_cold_start": {
+          "auc": 0.500699345,
+          "balanced_accuracy": 0.5003500000000001,
+          "eer": 0.49965
+        },
+        "no_temporal": {
+          "auc": 0.500698895,
+          "balanced_accuracy": 0.50035,
+          "eer": 0.49965
+        }
+      },
+      "mlp": {
+        "full": {
+          "auc": 0.500699145,
+          "balanced_accuracy": 0.50035,
+          "eer": 0.4996499999999999
+        },
+        "no_probability": {
+          "auc": 0.50000182,
+          "balanced_accuracy": 0.5,
+          "eer": 0.5
+        },
+        "no_entropy": {
+          "auc": 0.500510315,
+          "balanced_accuracy": 0.50025,
+          "eer": 0.49975
+        },
+        "no_cold_start": {
+          "auc": 0.500698365,
+          "balanced_accuracy": 0.50035,
+          "eer": 0.49965000000000004
+        },
+        "no_temporal": {
+          "auc": 0.50069925,
+          "balanced_accuracy": 0.5003500000000001,
+          "eer": 0.49965
+        }
+      }
+    },
+    "lastfm": {
+      "linear": {
+        "full": {
+          "auc": 0.5001046199999999,
+          "balanced_accuracy": 0.50005,
+          "eer": 0.49995
+        },
+        "no_probability": {
+          "auc": 0.5,
+          "balanced_accuracy": 0.5,
+          "eer": 0.5
+        },
+        "no_entropy": {
+          "auc": 0.5001002099999999,
+          "balanced_accuracy": 0.50005,
+          "eer": 0.49995
+        },
+        "no_cold_start": {
+          "auc": 0.5001978,
+          "balanced_accuracy": 0.5001,
+          "eer": 0.4999
+        },
+        "no_temporal": {
+          "auc": 0.50010467,
+          "balanced_accuracy": 0.50005,
+          "eer": 0.49995
+        }
+      },
+      "forest": {
+        "full": {
+          "auc": 0.50010087,
+          "balanced_accuracy": 0.50005,
+          "eer": 0.49995
+        },
+        "no_probability": {
+          "auc": 0.49999999999999994,
+          "balanced_accuracy": 0.5,
+          "eer": 0.5
+        },
+        "no_entropy": {
+          "auc": 0.50019824,
+          "balanced_accuracy": 0.5001,
+          "eer": 0.4999
+        },
+        "no_cold_start": {
+          "auc": 0.50010022,
+          "balanced_accuracy": 0.50005,
+          "eer": 0.49994999999999995
+        },
+        "no_temporal": {
+          "auc": 0.5001935149999999,
+          "balanced_accuracy": 0.5001,
+          "eer": 0.4999
+        }
+      },
+      "mlp": {
+        "full": {
+          "auc": 0.50000299,
+          "balanced_accuracy": 0.5,
+          "eer": 0.5
+        },
+        "no_probability": {
+          "auc": 0.499999995,
+          "balanced_accuracy": 0.5,
+          "eer": 0.5
+        },
+        "no_entropy": {
+          "auc": 0.50015288,
+          "balanced_accuracy": 0.50005,
+          "eer": 0.4999
+        },
+        "no_cold_start": {
+          "auc": 0.5000005049999999,
+          "balanced_accuracy": 0.5,
+          "eer": 0.5
+        },
+        "no_temporal": {
+          "auc": 0.5000003399999999,
+          "balanced_accuracy": 0.5,
+          "eer": 0.5
+        }
+      }
+    },
+    "geolife_cells": {
+      "linear": {
+        "full": {
+          "auc": 0.50019948,
+          "balanced_accuracy": 0.5001,
+          "eer": 0.4999
+        },
+        "no_probability": {
+          "auc": 0.5001009599999999,
+          "balanced_accuracy": 0.5001,
+          "eer": 0.49995
+        },
+        "no_entropy": {
+          "auc": 0.50019939,
+          "balanced_accuracy": 0.5001,
+          "eer": 0.4999
+        },
+        "no_cold_start": {
+          "auc": 0.50019942,
+          "balanced_accuracy": 0.5001,
+          "eer": 0.4999
+        },
+        "no_temporal": {
+          "auc": 0.5001993799999999,
+          "balanced_accuracy": 0.5001,
+          "eer": 0.4999
+        }
+      },
+      "forest": {
+        "full": {
+          "auc": 0.5001003300000001,
+          "balanced_accuracy": 0.50005,
+          "eer": 0.49995
+        },
+        "no_probability": {
+          "auc": 0.50019945,
+          "balanced_accuracy": 0.5001,
+          "eer": 0.4999
+        },
+        "no_entropy": {
+          "auc": 0.5001002400000001,
+          "balanced_accuracy": 0.50005,
+          "eer": 0.49995
+        },
+        "no_cold_start": {
+          "auc": 0.5001004,
+          "balanced_accuracy": 0.50005,
+          "eer": 0.49995
+        },
+        "no_temporal": {
+          "auc": 0.5001001500000001,
+          "balanced_accuracy": 0.50005,
+          "eer": 0.49994999999999995
+        }
+      },
+      "mlp": {
+        "full": {
+          "auc": 0.500169315,
+          "balanced_accuracy": 0.5001,
+          "eer": 0.4999
+        },
+        "no_probability": {
+          "auc": 0.50016138,
+          "balanced_accuracy": 0.50005,
+          "eer": 0.49995
+        },
+        "no_entropy": {
+          "auc": 0.500199705,
+          "balanced_accuracy": 0.5001,
+          "eer": 0.4999
+        },
+        "no_cold_start": {
+          "auc": 0.50017504,
+          "balanced_accuracy": 0.5001,
+          "eer": 0.49989999999999996
+        },
+        "no_temporal": {
+          "auc": 0.5001289250000001,
+          "balanced_accuracy": 0.50005,
+          "eer": 0.49989999999999996
+        }
+      }
+    },
+    "t_drive_cells": {
+      "linear": {
+        "full": {
+          "auc": 0.532556255,
+          "balanced_accuracy": 0.5185,
+          "eer": 0.48164999999999997
+        },
+        "no_probability": {
+          "auc": 0.5037777,
+          "balanced_accuracy": 0.5031,
+          "eer": 0.498
+        },
+        "no_entropy": {
+          "auc": 0.5307056950000001,
+          "balanced_accuracy": 0.5185500000000001,
+          "eer": 0.48185
+        },
+        "no_cold_start": {
+          "auc": 0.5328688549999999,
+          "balanced_accuracy": 0.51835,
+          "eer": 0.4817
+        },
+        "no_temporal": {
+          "auc": 0.52323683,
+          "balanced_accuracy": 0.513,
+          "eer": 0.487
+        }
+      },
+      "forest": {
+        "full": {
+          "auc": 0.536801105,
+          "balanced_accuracy": 0.51905,
+          "eer": 0.481
+        },
+        "no_probability": {
+          "auc": 0.52801296,
+          "balanced_accuracy": 0.5144500000000001,
+          "eer": 0.48550000000000004
+        },
+        "no_entropy": {
+          "auc": 0.5361676,
+          "balanced_accuracy": 0.5191,
+          "eer": 0.4809
+        },
+        "no_cold_start": {
+          "auc": 0.5368428049999999,
+          "balanced_accuracy": 0.5191,
+          "eer": 0.48095
+        },
+        "no_temporal": {
+          "auc": 0.536502625,
+          "balanced_accuracy": 0.5191,
+          "eer": 0.4809
+        }
+      },
+      "mlp": {
+        "full": {
+          "auc": 0.53608448,
+          "balanced_accuracy": 0.5188999999999999,
+          "eer": 0.48105
+        },
+        "no_probability": {
+          "auc": 0.52286265,
+          "balanced_accuracy": 0.51345,
+          "eer": 0.48760000000000003
+        },
+        "no_entropy": {
+          "auc": 0.5286474099999999,
+          "balanced_accuracy": 0.51645,
+          "eer": 0.4857
+        },
+        "no_cold_start": {
+          "auc": 0.534330085,
+          "balanced_accuracy": 0.51785,
+          "eer": 0.48205
+        },
+        "no_temporal": {
+          "auc": 0.53368836,
+          "balanced_accuracy": 0.5182,
+          "eer": 0.4818
+        }
+      }
+    }
+  }
+}

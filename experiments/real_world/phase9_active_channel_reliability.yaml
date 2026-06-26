@@ -1,0 +1,45 @@
+campaign: phase9_active_channel_reliability
+date: 2026-06-26
+seed: 20260626
+payload_bits: 1024
+corrected_ber_target: 0.001
+code:
+  block_bits: 16
+  repetitions: 9
+  seed: 20260626
+attacks:
+  - name: passive
+    seed_offset: 0
+    params:
+      deletion_rate: 0.0
+      insertion_rate: 0.0
+      truncate_fraction: 1.0
+      reorder_window: 1
+  - name: deletion_10_insertion_05
+    seed_offset: 1
+    params:
+      deletion_rate: 0.10
+      insertion_rate: 0.05
+      truncate_fraction: 1.0
+      reorder_window: 1
+  - name: deletion_10_reorder_16
+    seed_offset: 2
+    params:
+      deletion_rate: 0.10
+      insertion_rate: 0.0
+      truncate_fraction: 1.0
+      reorder_window: 16
+  - name: deletion_10_truncate_80
+    seed_offset: 3
+    params:
+      deletion_rate: 0.10
+      insertion_rate: 0.0
+      truncate_fraction: 0.80
+      reorder_window: 16
+  - name: mixed_bounded_active
+    seed_offset: 4
+    params:
+      deletion_rate: 0.10
+      insertion_rate: 0.05
+      truncate_fraction: 0.85
+      reorder_window: 16

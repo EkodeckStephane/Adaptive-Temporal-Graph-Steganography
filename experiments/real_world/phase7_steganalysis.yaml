@@ -1,0 +1,31 @@
+campaign: phase7_external_steganalysis
+date: 2026-06-26
+datasets:
+  - tgbl-wiki
+  - mooc
+  - lastfm
+  - geolife_cells
+  - t_drive_cells
+event_datasets:
+  - id: geolife_cells
+    processed_path: datasets/processed/geolife_cells/events.parquet
+  - id: t_drive_cells
+    processed_path: datasets/processed/t_drive_cells/events.parquet
+max_rows_per_split: 10000
+model:
+  name: temporal_source_previous_destination_backoff
+  prior_strength: 8.0
+  top_k: 32
+codec:
+  max_bits_per_transition: 1
+  codec_backend: range
+  max_local_total_variation: 0.35
+  max_local_kl_bits: 0.60
+  min_entropy_bits: 0.5
+  cover_when_unsafe: true
+  max_encoded_rank_fraction: 0.5
+detectors:
+  - linear
+  - forest
+  - mlp
+seed: 20260626

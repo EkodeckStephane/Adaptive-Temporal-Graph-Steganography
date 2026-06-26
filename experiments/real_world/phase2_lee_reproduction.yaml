@@ -1,0 +1,28 @@
+campaign: phase2_lee_reproduction
+date: 2026-06-13
+seed: 1234
+source:
+  repository: https://github.com/dwgoon/hmg
+  commit: b7499454be42aa24b61825b2f87f9083539b02fa
+  dataset: terrorists-911
+  dataset_kind: real_observed_network
+  directed: true
+messages:
+  bind_bytes: [8, 16, 24]
+  adabind_hex: ffffffffffffffff
+  bynis_text: phase-two-baseline
+adabind:
+  max_iterations: 500
+  sampled_edges: 20
+  extra_target_edges: 0
+bynis:
+  extra_edges: [0, 50]
+walks:
+  length: 64
+  walks_per_node: 4
+  node2vec:
+    p: 0.5
+    q: 2.0
+attacks:
+  adjacent_swap_counts: [1, 2, 4, 8, 16]
+  trials: 100

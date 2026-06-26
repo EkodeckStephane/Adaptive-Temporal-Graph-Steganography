@@ -1,0 +1,5 @@
+dataset,name,max_bits_per_transition,min_encoded_probability,max_encoded_rank_fraction,max_encoded_surprise_bits,auc,auc_ci_low,auc_ci_high,balanced_accuracy,eer,embedding_rate,bits_per_transition
+t_drive_cells,previous_high_payload,2,0.0,1.0,inf,0.615104078125,0.6085115776046022,0.621963151555022,0.5625625000000001,0.4374375,0.255,0.4715
+t_drive_cells,range_one_bit,1,0.0,1.0,inf,0.5450747499999999,0.5372315797313411,0.5536130381877176,0.5233125,0.4766875,0.11225,0.11225
+t_drive_cells,selected_rank_half,1,0.0,0.5,inf,0.5360749453125001,0.5281737976389665,0.5425479718952092,0.5185625,0.48143749999999996,0.096125,0.096125
+t_drive_cells,strict_rank_quarter,1,0.0,0.25,inf,0.5197675625,0.5129502960364504,0.5301271788586389,0.5101249999999999,0.489875,0.068,0.068

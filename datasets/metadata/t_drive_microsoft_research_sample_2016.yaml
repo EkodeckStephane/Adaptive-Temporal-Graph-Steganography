@@ -1,0 +1,108 @@
+dataset: t_drive
+version: microsoft_research_sample_2016
+retrieved_on: '2026-06-13'
+source_url: https://www.microsoft.com/en-us/research/publication/t-drive-trajectory-data-sample/
+license: Terms not explicit on source page - redistribution pending review
+level: A
+observed_trajectories: true
+processed:
+  path: datasets/processed/t_drive
+  script: code/scripts/run_phase3_data_pipeline.py
+  columns:
+  - point_id
+  - sequence_id
+  - entity_id
+  - timestamp
+  - latitude
+  - longitude
+  - split
+  files:
+    train:
+      path: datasets/processed/t_drive/train.parquet
+      bytes: 80043747
+      sha256: 8334da8033239473266ed92625462dd9f23e417326e72b5fe89255683535c4be
+    validation:
+      path: datasets/processed/t_drive/validation.parquet
+      bytes: 13158570
+      sha256: 40899a18068d19a50cd0c7366b8787b0dd5118037477b9714e63355be4e07698
+    test:
+      path: datasets/processed/t_drive/test.parquet
+      bytes: 10164248
+      sha256: 8e6362bbcfc5d6bcdb349d7f6d098f9ece1a3b4dbd077cfe1cf67d38176ec71b
+split:
+  train_end: 1202342399
+  validation_end: 1202428799
+  tie_policy: whole_session_same_split_with_boundary_quarantine
+statistics:
+  source_files: 8911
+  unique_taxi_files: 8911
+  duplicate_taxi_files_across_archives: 0
+  article_reported_taxis: 10357
+  article_reported_points: 15000000
+  raw_points: 10088351
+  users: 8849
+  sessions: 211404
+  points: 10055095
+  invalid_points: 98
+  spatial_outlier_points: 33158
+  coordinate_bounds:
+    latitude_min: 18.0
+    latitude_max: 54.0
+    longitude_min: 73.0
+    longitude_max: 135.0
+  session_gap_seconds: 1200
+  boundary_crossing_sessions: 0
+  boundary_crossing_points: 0
+  median_points_per_session: 20.0
+  median_duration_seconds: 5408.0
+  median_sampling_interval_seconds: 300.0
+  latitude_min: 18.53185
+  latitude_max: 53.94632
+  longitude_min: 83.46683
+  longitude_max: 133.31995
+  split_sessions:
+    train: 161746
+    validation: 24529
+    test: 25129
+  split_points:
+    train: 7635952
+    validation: 1381116
+    test: 1038027
+  train_end: 1202342399
+  validation_end: 1202428799
+  actual_train_point_fraction: 0.7594112238621316
+  actual_validation_point_fraction: 0.137354843489793
+  actual_test_point_fraction: 0.10323393264807543
+limitations:
+- The Microsoft source page does not state explicit redistribution terms.
+- Sessions are operationally segmented at day changes or gaps above 20 minutes.
+- Spatial graph discretization is deferred and must be fitted on training data only.
+raw:
+  archives:
+  - path: datasets/raw/t_drive/010.zip
+    bytes: 10732764
+    sha256: 8bff58bcd51710033ba6acfecd80d4c8e19060ef64eb1a974f2e7db50cdcd213
+  - path: datasets/raw/t_drive/011.zip
+    bytes: 10330098
+    sha256: 09b1d794a5da3709b89d76a1ca24e6bd6d4f5f159b41af1d054cf49372382cc1
+  - path: datasets/raw/t_drive/012.zip
+    bytes: 8765021
+    sha256: f41cf0f047cb86575092504739ce4da99416f6fc8b9206bc66793403d652f2b2
+  - path: datasets/raw/t_drive/013.zip
+    bytes: 7511662
+    sha256: 92cfbc6aa4c88d6301b0b6e5d971fe3f9cc936d8db0443f6cce14f27a8359702
+  - path: datasets/raw/t_drive/014.zip
+    bytes: 1786189
+    sha256: c13d36bd0c891213d33c9cfe37213bb6b3ed2e498270a0a6c765419a3cecf95e
+  - path: datasets/raw/t_drive/06.zip
+    bytes: 7827329
+    sha256: 594eb4c9dd505c1a0b8c299321578602fd54a803632d654a8add8248c4156874
+  - path: datasets/raw/t_drive/07.zip
+    bytes: 11720280
+    sha256: 7c7943fb1c97bd0334aedeabad71ccfa263e0a2a696940a57a73d98cfa883feb
+  - path: datasets/raw/t_drive/08.zip
+    bytes: 13519832
+    sha256: 09c519b3dd984a132c418bca299721d1e6b05185e864e856d2b0012426d64844
+  - path: datasets/raw/t_drive/09.zip
+    bytes: 11771101
+    sha256: 68aa8cdbc2daa6722a531ce74585afe9f19e60c63bfa773412881f401b81cecc

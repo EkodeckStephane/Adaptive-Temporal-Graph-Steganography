@@ -1,0 +1,392 @@
+{
+  "campaign": "phase3_real_data_pipeline",
+  "date": "2026-06-13",
+  "datasets": [
+    {
+      "id": "tgbl-wiki",
+      "version": "v2",
+      "level": "B",
+      "license": "MIT",
+      "observed_trajectories": false,
+      "source_url": "https://object-arbutus.cloud.computecanada.ca/tgb/tgbl-wiki-v2.zip",
+      "raw_archive": "datasets/raw/tgbl_wiki/tgbl-wiki-v2.zip",
+      "raw_archive_bytes": 40895954,
+      "raw_sha256": "1b6c756b4dc0bac9d1f97218467949472daf5b1eebe497f38721493682fdd130",
+      "processed_path": "datasets/processed/tgbl_wiki/events.parquet",
+      "processed_bytes": 1357379,
+      "processed_sha256": "596c45556ef08ad161764cc2d062055e4c5c11751449389273b51459b2de1d15",
+      "canonical_columns": [
+        "event_id",
+        "source",
+        "destination",
+        "timestamp",
+        "label",
+        "sequence_id",
+        "split"
+      ],
+      "cutoffs": {
+        "train_end": 1862652.0,
+        "validation_end": 2218288.0,
+        "actual_train_fraction": 0.700001270050929,
+        "actual_validation_fraction": 0.14999936497453548,
+        "actual_test_fraction": 0.14999936497453548,
+        "tie_policy": "same_timestamp_same_split"
+      },
+      "statistics": {
+        "events": 157474,
+        "nodes": 9227,
+        "sources": 8227,
+        "destinations": 1000,
+        "unique_directed_edges": 18257,
+        "repeated_edge_fraction": 0.8840634009423778,
+        "exact_duplicate_fraction": 0.0,
+        "reciprocal_edge_fraction": 0.0,
+        "destination_entropy_bits": 9.682640977519464,
+        "conditional_destination_entropy_bits": 1.197076621533923,
+        "effective_branching_factor": 2.2927461359710306,
+        "global_inter_event_burstiness": 0.039496681666175225,
+        "median_source_burstiness": 0.18593406671768586,
+        "timestamp_min": 0.0,
+        "timestamp_max": 2678373.0,
+        "split_counts": {
+          "train": 110232,
+          "validation": 23621,
+          "test": 23621
+        },
+        "cold_start_nodes": {
+          "validation": 836,
+          "test": 1099
+        },
+        "self_loop_fraction": 0.0,
+        "log_events": 5.197208859150115
+      }
+    },
+    {
+      "id": "geolife",
+      "version": "1.3",
+      "level": "A",
+      "license": "Microsoft Research License Agreement - Non-Commercial Use Only",
+      "observed_trajectories": true,
+      "source_url": "https://www.microsoft.com/en-us/download/details.aspx?id=52367",
+      "raw_archive": "datasets/raw/geolife/Geolife_Trajectories_1.3.zip",
+      "raw_archive_bytes": 313164406,
+      "raw_sha256": "1107c5ac064d0a23c8d021a8736a77e53abc75b227062e6260342c6a8d86bdb6",
+      "processed_path": "datasets/processed/geolife",
+      "processed_files": {
+        "train": {
+          "path": "datasets/processed/geolife/train.parquet",
+          "bytes": 204292454,
+          "sha256": "dbf690d47f1c02a736acb677d4a3b8905679f923fe8a123c58973a7acfc09e3c"
+        },
+        "validation": {
+          "path": "datasets/processed/geolife/validation.parquet",
+          "bytes": 47229630,
+          "sha256": "73c97a4345c100add0649482fa172e37f9f1abdb1b865b0833d975fec73d6da6"
+        },
+        "test": {
+          "path": "datasets/processed/geolife/test.parquet",
+          "bytes": 50802971,
+          "sha256": "54f3f5e8a3f12f5aa6d6b7e6da66d3205926c6ac04bf539c8e46012fdd6f5454"
+        }
+      },
+      "canonical_columns": [
+        "point_id",
+        "sequence_id",
+        "entity_id",
+        "timestamp",
+        "latitude",
+        "longitude",
+        "split"
+      ],
+      "cutoffs": {
+        "train_end": 1245280534,
+        "validation_end": 1277521714,
+        "tie_policy": "whole_trajectory_same_split"
+      },
+      "statistics": {
+        "users": 182,
+        "trajectories": 18668,
+        "archive_trajectory_files": 18670,
+        "bundled_guide_reported_trajectories": 17621,
+        "archive_file_count_difference_from_guide": 1049,
+        "points": 24867361,
+        "invalid_points": 1,
+        "nonmonotonic_steps": 0,
+        "empty_trajectories": 0,
+        "boundary_crossing_trajectories": 2,
+        "boundary_crossing_points": 9616,
+        "median_points_per_trajectory": 506.0,
+        "median_duration_seconds": 2527.5,
+        "median_sampling_interval_seconds": 2.0,
+        "latitude_min": 1.044024,
+        "latitude_max": 64.751993,
+        "longitude_min": -179.9695933,
+        "longitude_max": 179.9969416,
+        "split_trajectories": {
+          "train": 13068,
+          "validation": 2800,
+          "test": 2800
+        },
+        "split_points": {
+          "train": 16784687,
+          "validation": 3859147,
+          "test": 4223527
+        },
+        "actual_train_trajectory_fraction": 0.7000214270409256,
+        "actual_validation_trajectory_fraction": 0.1499892864795372,
+        "actual_test_trajectory_fraction": 0.1499892864795372,
+        "train_end": 1245280534,
+        "validation_end": 1277521714
+      }
+    },
+    {
+      "id": "t_drive",
+      "version": "microsoft_research_sample_2016",
+      "level": "A",
+      "license": "Terms not explicit on source page - redistribution pending review",
+      "observed_trajectories": true,
+      "source_url": "https://www.microsoft.com/en-us/research/publication/t-drive-trajectory-data-sample/",
+      "raw_archives": [
+        {
+          "path": "datasets/raw/t_drive/010.zip",
+          "bytes": 10732764,
+          "sha256": "8bff58bcd51710033ba6acfecd80d4c8e19060ef64eb1a974f2e7db50cdcd213"
+        },
+        {
+          "path": "datasets/raw/t_drive/011.zip",
+          "bytes": 10330098,
+          "sha256": "09b1d794a5da3709b89d76a1ca24e6bd6d4f5f159b41af1d054cf49372382cc1"
+        },
+        {
+          "path": "datasets/raw/t_drive/012.zip",
+          "bytes": 8765021,
+          "sha256": "f41cf0f047cb86575092504739ce4da99416f6fc8b9206bc66793403d652f2b2"
+        },
+        {
+          "path": "datasets/raw/t_drive/013.zip",
+          "bytes": 7511662,
+          "sha256": "92cfbc6aa4c88d6301b0b6e5d971fe3f9cc936d8db0443f6cce14f27a8359702"
+        },
+        {
+          "path": "datasets/raw/t_drive/014.zip",
+          "bytes": 1786189,
+          "sha256": "c13d36bd0c891213d33c9cfe37213bb6b3ed2e498270a0a6c765419a3cecf95e"
+        },
+        {
+          "path": "datasets/raw/t_drive/06.zip",
+          "bytes": 7827329,
+          "sha256": "594eb4c9dd505c1a0b8c299321578602fd54a803632d654a8add8248c4156874"
+        },
+        {
+          "path": "datasets/raw/t_drive/07.zip",
+          "bytes": 11720280,
+          "sha256": "7c7943fb1c97bd0334aedeabad71ccfa263e0a2a696940a57a73d98cfa883feb"
+        },
+        {
+          "path": "datasets/raw/t_drive/08.zip",
+          "bytes": 13519832,
+          "sha256": "09c519b3dd984a132c418bca299721d1e6b05185e864e856d2b0012426d64844"
+        },
+        {
+          "path": "datasets/raw/t_drive/09.zip",
+          "bytes": 11771101,
+          "sha256": "68aa8cdbc2daa6722a531ce74585afe9f19e60c63bfa773412881f401b81cecc"
+        }
+      ],
+      "processed_path": "datasets/processed/t_drive",
+      "processed_files": {
+        "train": {
+          "path": "datasets/processed/t_drive/train.parquet",
+          "bytes": 80043747,
+          "sha256": "8334da8033239473266ed92625462dd9f23e417326e72b5fe89255683535c4be"
+        },
+        "validation": {
+          "path": "datasets/processed/t_drive/validation.parquet",
+          "bytes": 13158570,
+          "sha256": "40899a18068d19a50cd0c7366b8787b0dd5118037477b9714e63355be4e07698"
+        },
+        "test": {
+          "path": "datasets/processed/t_drive/test.parquet",
+          "bytes": 10164248,
+          "sha256": "8e6362bbcfc5d6bcdb349d7f6d098f9ece1a3b4dbd077cfe1cf67d38176ec71b"
+        }
+      },
+      "canonical_columns": [
+        "point_id",
+        "sequence_id",
+        "entity_id",
+        "timestamp",
+        "latitude",
+        "longitude",
+        "split"
+      ],
+      "cutoffs": {
+        "train_end": 1202342399,
+        "validation_end": 1202428799,
+        "tie_policy": "whole_session_same_split_with_boundary_quarantine"
+      },
+      "statistics": {
+        "source_files": 8911,
+        "unique_taxi_files": 8911,
+        "duplicate_taxi_files_across_archives": 0,
+        "article_reported_taxis": 10357,
+        "article_reported_points": 15000000,
+        "raw_points": 10088351,
+        "users": 8849,
+        "sessions": 211404,
+        "points": 10055095,
+        "invalid_points": 98,
+        "spatial_outlier_points": 33158,
+        "coordinate_bounds": {
+          "latitude_min": 18.0,
+          "latitude_max": 54.0,
+          "longitude_min": 73.0,
+          "longitude_max": 135.0
+        },
+        "session_gap_seconds": 1200,
+        "boundary_crossing_sessions": 0,
+        "boundary_crossing_points": 0,
+        "median_points_per_session": 20.0,
+        "median_duration_seconds": 5408.0,
+        "median_sampling_interval_seconds": 300.0,
+        "latitude_min": 18.53185,
+        "latitude_max": 53.94632,
+        "longitude_min": 83.46683,
+        "longitude_max": 133.31995,
+        "split_sessions": {
+          "train": 161746,
+          "validation": 24529,
+          "test": 25129
+        },
+        "split_points": {
+          "train": 7635952,
+          "validation": 1381116,
+          "test": 1038027
+        },
+        "train_end": 1202342399,
+        "validation_end": 1202428799,
+        "actual_train_point_fraction": 0.7594112238621316,
+        "actual_validation_point_fraction": 0.137354843489793,
+        "actual_test_point_fraction": 0.10323393264807543
+      }
+    },
+    {
+      "id": "mooc",
+      "version": "jodie_2019",
+      "level": "B",
+      "license": "Stanford SNAP terms - redistribution review pending",
+      "observed_trajectories": false,
+      "source_url": "https://snap.stanford.edu/jodie/mooc.csv",
+      "raw_archive": "datasets/raw/jodie/mooc.csv",
+      "raw_archive_bytes": 41449822,
+      "raw_sha256": "5e29679063c6e416c2ae741d94a8f2b8e996f21e7cbf278488687fb6cb1df15a",
+      "processed_path": "datasets/processed/mooc/events.parquet",
+      "processed_bytes": 2408475,
+      "processed_sha256": "d8ee4eb3a63219ca59b05b461028d09efdbb68a5697f34ac779cbfbb11c856be",
+      "canonical_columns": [
+        "event_id",
+        "source",
+        "destination",
+        "timestamp",
+        "label",
+        "sequence_id",
+        "split"
+      ],
+      "cutoffs": {
+        "train_end": 1917241.0,
+        "validation_end": 2250152.0,
+        "actual_train_fraction": 0.7000017000648453,
+        "actual_validation_fraction": 0.14999914996757732,
+        "actual_test_fraction": 0.14999914996757732,
+        "tie_policy": "same_timestamp_same_split"
+      },
+      "statistics": {
+        "events": 411749,
+        "nodes": 7144,
+        "sources": 7047,
+        "destinations": 97,
+        "unique_directed_edges": 178443,
+        "repeated_edge_fraction": 0.5666218982924063,
+        "exact_duplicate_fraction": 0.00013114785949692654,
+        "reciprocal_edge_fraction": 0.0,
+        "destination_entropy_bits": 5.92725275273353,
+        "conditional_destination_entropy_bits": 4.87995143119827,
+        "effective_branching_factor": 29.445013527272163,
+        "global_inter_event_burstiness": 0.811433425632241,
+        "median_source_burstiness": 0.5773085939985644,
+        "timestamp_min": 0.0,
+        "timestamp_max": 2572086.0,
+        "split_counts": {
+          "train": 288225,
+          "validation": 61762,
+          "test": 61762
+        },
+        "cold_start_nodes": {
+          "validation": 292,
+          "test": 352
+        },
+        "self_loop_fraction": 0.0,
+        "log_events": 5.614632553087671
+      }
+    },
+    {
+      "id": "lastfm",
+      "version": "jodie_2019",
+      "level": "B",
+      "license": "Stanford SNAP terms - redistribution review pending",
+      "observed_trajectories": false,
+      "source_url": "https://snap.stanford.edu/jodie/lastfm.csv",
+      "raw_archive": "datasets/raw/jodie/lastfm.csv",
+      "raw_archive_bytes": 38770679,
+      "raw_sha256": "06a917ae03dbd66447616225452f7d610bb6cb2603ea7ee5ef44ddc55044be07",
+      "processed_path": "datasets/processed/lastfm/events.parquet",
+      "processed_bytes": 7876262,
+      "processed_sha256": "7dc12b20425e4c7a22aa5651abda3fc7cad5b7e095164145e5ee4f652d6294a1",
+      "canonical_columns": [
+        "event_id",
+        "source",
+        "destination",
+        "timestamp",
+        "label",
+        "sequence_id",
+        "split"
+      ],
+      "cutoffs": {
+        "train_end": 103764818.0,
+        "validation_end": 120235548.0,
+        "actual_train_fraction": 0.7000006960002413,
+        "actual_validation_fraction": 0.14999965199987936,
+        "actual_test_fraction": 0.14999965199987936,
+        "tie_policy": "same_timestamp_same_split"
+      },
+      "statistics": {
+        "events": 1293103,
+        "nodes": 1980,
+        "sources": 980,
+        "destinations": 1000,
+        "unique_directed_edges": 154993,
+        "repeated_edge_fraction": 0.8801387051147511,
+        "exact_duplicate_fraction": 0.0,
+        "reciprocal_edge_fraction": 0.0,
+        "destination_entropy_bits": 9.881120204822402,
+        "conditional_destination_entropy_bits": 7.033950220111259,
+        "effective_branching_factor": 131.0478813972623,
+        "global_inter_event_burstiness": 0.4712738511935195,
+        "median_source_burstiness": 0.5628462792962157,
+        "timestamp_min": 0.0,
+        "timestamp_max": 137107267.0,
+        "split_counts": {
+          "train": 905173,
+          "validation": 193965,
+          "test": 193965
+        },
+        "cold_start_nodes": {
+          "validation": 115,
+          "test": 179
+        },
+        "self_loop_fraction": 0.0,
+        "log_events": 6.111633119273316
+      }
+    }
+  ]
+}

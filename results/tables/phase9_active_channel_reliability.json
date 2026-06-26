@@ -1,0 +1,97 @@
+{
+  "campaign": "phase9_active_channel_reliability",
+  "date": "2026-06-26",
+  "payload_bits": 1024,
+  "code": {
+    "block_bits": 16,
+    "repetitions": 9,
+    "seed": 20260626
+  },
+  "attacks": {
+    "passive": {
+      "params": {
+        "deletion_rate": 0.0,
+        "insertion_rate": 0.0,
+        "truncate_fraction": 1.0,
+        "reorder_window": 1
+      },
+      "payload_bits": 1024,
+      "packets_sent": 576,
+      "packets_received": 576,
+      "recovered_bits": 1024,
+      "corrected_ber": 0.0,
+      "recovered_fraction": 1.0,
+      "authentication_success": true,
+      "theoretical_block_failure_bound": 0.0,
+      "meets_corrected_ber_target": true
+    },
+    "deletion_10_insertion_05": {
+      "params": {
+        "deletion_rate": 0.1,
+        "insertion_rate": 0.05,
+        "truncate_fraction": 1.0,
+        "reorder_window": 1
+      },
+      "payload_bits": 1024,
+      "packets_sent": 576,
+      "packets_received": 559,
+      "recovered_bits": 1024,
+      "corrected_ber": 0.0,
+      "recovered_fraction": 1.0,
+      "authentication_success": true,
+      "theoretical_block_failure_bound": 6.400000000000003e-08,
+      "meets_corrected_ber_target": true
+    },
+    "deletion_10_reorder_16": {
+      "params": {
+        "deletion_rate": 0.1,
+        "insertion_rate": 0.0,
+        "truncate_fraction": 1.0,
+        "reorder_window": 16
+      },
+      "payload_bits": 1024,
+      "packets_sent": 576,
+      "packets_received": 516,
+      "recovered_bits": 1024,
+      "corrected_ber": 0.0,
+      "recovered_fraction": 1.0,
+      "authentication_success": true,
+      "theoretical_block_failure_bound": 6.400000000000003e-08,
+      "meets_corrected_ber_target": true
+    },
+    "deletion_10_truncate_80": {
+      "params": {
+        "deletion_rate": 0.1,
+        "insertion_rate": 0.0,
+        "truncate_fraction": 0.8,
+        "reorder_window": 16
+      },
+      "payload_bits": 1024,
+      "packets_sent": 576,
+      "packets_received": 423,
+      "recovered_bits": 1024,
+      "corrected_ber": 0.0,
+      "recovered_fraction": 1.0,
+      "authentication_success": true,
+      "theoretical_block_failure_bound": 6.400000000000003e-08,
+      "meets_corrected_ber_target": true
+    },
+    "mixed_bounded_active": {
+      "params": {
+        "deletion_rate": 0.1,
+        "insertion_rate": 0.05,
+        "truncate_fraction": 0.85,
+        "reorder_window": 16
+      },
+      "payload_bits": 1024,
+      "packets_sent": 576,
+      "packets_received": 471,
+      "recovered_bits": 1024,
+      "corrected_ber": 0.0,
+      "recovered_fraction": 1.0,
+      "authentication_success": true,
+      "theoretical_block_failure_bound": 6.400000000000003e-08,
+      "meets_corrected_ber_target": true
+    }
+  }
+}

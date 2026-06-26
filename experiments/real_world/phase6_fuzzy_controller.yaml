@@ -1,0 +1,42 @@
+campaign: phase6_fuzzy_controller_baseline
+date: 2026-06-24
+controller:
+  name: deterministic_takagi_sugeno_baseline
+  max_bits_per_transition: 4
+  stop_threshold: 0.92
+baseline:
+  name: fixed_entropy_threshold
+  entropy_threshold: 0.50
+mlp_baseline:
+  name: comparable_mlp_policy
+  seed: 20260626
+grid:
+  predictive_entropy: [0.10, 0.35, 0.70, 0.95]
+  calibration_uncertainty: [0.05, 0.60]
+  steganalysis_risk: [0.05, 0.70]
+  payload_pressure: [0.20, 0.85]
+  dead_end_risk: [0.05, 0.98]
+  channel_fragility: [0.05, 0.70]
+evaluation:
+  metrics:
+    - mode_counts
+    - mean_local_payload_bits
+    - abstention_rate
+    - embed_rate
+real_data:
+  datasets:
+    - tgbl-wiki
+    - mooc
+    - lastfm
+    - geolife_cells
+    - t_drive_cells
+  event_datasets:
+    - id: geolife_cells
+      processed_path: datasets/processed/geolife_cells/events.parquet
+    - id: t_drive_cells
+      processed_path: datasets/processed/t_drive_cells/events.parquet
+  max_rows_per_split: 20000
+  model:
+    name: temporal_source_previous_destination_backoff
+    prior_strength: 8.0
+    top_k: 32

@@ -1,0 +1,26 @@
+campaign: phase4_cover_model_baseline
+date: 2026-06-24
+datasets:
+  - tgbl-wiki
+  - mooc
+  - lastfm
+model:
+  name: source_destination_frequency
+  prior_strength: 8.0
+  training_split: train
+  cold_start_destination: explicit_unknown_bucket
+evaluation:
+  task: next_destination_probability
+  calibration_bins: 10
+  metrics:
+    - mean_nll_bits
+    - perplexity
+    - top1_accuracy
+    - expected_calibration_error
+    - unseen_source_fraction
+    - unseen_destination_fraction
+scope:
+  included: level_b_interaction_streams
+  excluded_until_discretization:
+    - geolife
+    - t_drive

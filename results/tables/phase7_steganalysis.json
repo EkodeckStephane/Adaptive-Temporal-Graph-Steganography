@@ -1,0 +1,147 @@
+{
+  "campaign": "phase7_external_steganalysis",
+  "date": "2026-06-26",
+  "model": {
+    "name": "temporal_source_previous_destination_backoff",
+    "prior_strength": 8.0,
+    "top_k": 32
+  },
+  "codec": {
+    "max_bits_per_transition": 1,
+    "codec_backend": "range",
+    "max_local_total_variation": 0.35,
+    "max_local_kl_bits": 0.6,
+    "min_entropy_bits": 0.5,
+    "cover_when_unsafe": true,
+    "max_encoded_rank_fraction": 0.5
+  },
+  "detectors": {
+    "tgbl-wiki": {
+      "linear": {
+        "auc": 0.55616907,
+        "balanced_accuracy": 0.53155,
+        "eer": 0.4688
+      },
+      "forest": {
+        "auc": 0.575789135,
+        "balanced_accuracy": 0.53975,
+        "eer": 0.46025
+      },
+      "mlp": {
+        "auc": 0.575478345,
+        "balanced_accuracy": 0.5398499999999999,
+        "eer": 0.46014999999999995
+      }
+    },
+    "mooc": {
+      "linear": {
+        "auc": 0.500692375,
+        "balanced_accuracy": 0.50035,
+        "eer": 0.49965000000000004
+      },
+      "forest": {
+        "auc": 0.5006054550000001,
+        "balanced_accuracy": 0.5003,
+        "eer": 0.4997
+      },
+      "mlp": {
+        "auc": 0.5006993,
+        "balanced_accuracy": 0.50035,
+        "eer": 0.4996499999999999
+      }
+    },
+    "lastfm": {
+      "linear": {
+        "auc": 0.5001046199999999,
+        "balanced_accuracy": 0.50005,
+        "eer": 0.49995
+      },
+      "forest": {
+        "auc": 0.50010087,
+        "balanced_accuracy": 0.50005,
+        "eer": 0.49995
+      },
+      "mlp": {
+        "auc": 0.500002995,
+        "balanced_accuracy": 0.5,
+        "eer": 0.5
+      }
+    },
+    "geolife_cells": {
+      "linear": {
+        "auc": 0.50019948,
+        "balanced_accuracy": 0.5001,
+        "eer": 0.4999
+      },
+      "forest": {
+        "auc": 0.5001003300000001,
+        "balanced_accuracy": 0.50005,
+        "eer": 0.49995
+      },
+      "mlp": {
+        "auc": 0.500169315,
+        "balanced_accuracy": 0.5001,
+        "eer": 0.4999
+      }
+    },
+    "t_drive_cells": {
+      "linear": {
+        "auc": 0.532556255,
+        "balanced_accuracy": 0.5185,
+        "eer": 0.48164999999999997
+      },
+      "forest": {
+        "auc": 0.536801105,
+        "balanced_accuracy": 0.51905,
+        "eer": 0.481
+      },
+      "mlp": {
+        "auc": 0.5360817550000001,
+        "balanced_accuracy": 0.5188999999999999,
+        "eer": 0.48105
+      }
+    }
+  },
+  "communication": {
+    "tgbl-wiki": {
+      "test_transitions": 10000,
+      "embed_rate": 0.0995,
+      "cover_rate": 0.9005,
+      "attempted_bits_per_transition": 0.0995,
+      "mean_local_total_variation": 0.01964413230071271,
+      "mean_local_kl_bits": 0.03108459189969732
+    },
+    "mooc": {
+      "test_transitions": 10000,
+      "embed_rate": 0.0008,
+      "cover_rate": 0.9992,
+      "attempted_bits_per_transition": 0.0008,
+      "mean_local_total_variation": 0.00018475783475783476,
+      "mean_local_kl_bits": 0.00031824435620514494
+    },
+    "lastfm": {
+      "test_transitions": 10000,
+      "embed_rate": 0.0007,
+      "cover_rate": 0.9993,
+      "attempted_bits_per_transition": 0.0007,
+      "mean_local_total_variation": 0.0001829519858452711,
+      "mean_local_kl_bits": 0.00031035610146702296
+    },
+    "geolife_cells": {
+      "test_transitions": 10000,
+      "embed_rate": 0.0022,
+      "cover_rate": 0.9978,
+      "attempted_bits_per_transition": 0.0022,
+      "mean_local_total_variation": 0.0004299481249996817,
+      "mean_local_kl_bits": 0.0006464082347620121
+    },
+    "t_drive_cells": {
+      "test_transitions": 10000,
+      "embed_rate": 0.1007,
+      "cover_rate": 0.8993,
+      "attempted_bits_per_transition": 0.1007,
+      "mean_local_total_variation": 0.021922206450618993,
+      "mean_local_kl_bits": 0.03635188613529317
+    }
+  }
+}

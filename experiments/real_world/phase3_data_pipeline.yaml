@@ -1,0 +1,59 @@
+campaign: phase3_real_data_pipeline
+date: 2026-06-13
+datasets:
+  - id: tgbl-wiki
+    version: v2
+    level: B
+    adapter: tgb_wiki
+    raw_archive: datasets/raw/tgbl_wiki/tgbl-wiki-v2.zip
+    raw_events: datasets/raw/tgbl_wiki/source/tgbl-wiki_edgelist_v2.csv
+    processed: datasets/processed/tgbl_wiki/events.parquet
+    source_url: https://object-arbutus.cloud.computecanada.ca/tgb/tgbl-wiki-v2.zip
+    archive_sha256: 1b6c756b4dc0bac9d1f97218467949472daf5b1eebe497f38721493682fdd130
+    license: MIT
+    observed_trajectories: false
+  - id: geolife
+    version: "1.3"
+    level: A
+    adapter: geolife_archive
+    raw_archive: datasets/raw/geolife/Geolife_Trajectories_1.3.zip
+    processed: datasets/processed/geolife
+    source_url: https://www.microsoft.com/en-us/download/details.aspx?id=52367
+    archive_sha256: 1107c5ac064d0a23c8d021a8736a77e53abc75b227062e6260342c6a8d86bdb6
+    license: Microsoft Research License Agreement - Non-Commercial Use Only
+    observed_trajectories: true
+  - id: t_drive
+    version: microsoft_research_sample_2016
+    level: A
+    adapter: tdrive_archives
+    raw_directory: datasets/raw/t_drive
+    processed: datasets/processed/t_drive
+    source_url: https://www.microsoft.com/en-us/research/publication/t-drive-trajectory-data-sample/
+    license: Terms not explicit on source page - redistribution pending review
+    observed_trajectories: true
+    session_gap_seconds: 1200
+    coordinate_bounds: [18.0, 54.0, 73.0, 135.0]
+  - id: mooc
+    version: jodie_2019
+    level: B
+    adapter: jodie_csv
+    raw_events: datasets/raw/jodie/mooc.csv
+    processed: datasets/processed/mooc/events.parquet
+    source_url: https://snap.stanford.edu/jodie/mooc.csv
+    raw_sha256: 5e29679063c6e416c2ae741d94a8f2b8e996f21e7cbf278488687fb6cb1df15a
+    license: Stanford SNAP terms - redistribution review pending
+    observed_trajectories: false
+  - id: lastfm
+    version: jodie_2019
+    level: B
+    adapter: jodie_csv
+    raw_events: datasets/raw/jodie/lastfm.csv
+    processed: datasets/processed/lastfm/events.parquet
+    source_url: https://snap.stanford.edu/jodie/lastfm.csv
+    raw_sha256: 06a917ae03dbd66447616225452f7d610bb6cb2603ea7ee5ef44ddc55044be07
+    license: Stanford SNAP terms - redistribution review pending
+    observed_trajectories: false
+splits:
+  train_fraction: 0.70
+  validation_fraction: 0.15
+  tie_policy: same_timestamp_same_split

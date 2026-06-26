@@ -1,0 +1,432 @@
+{
+  "campaign": "phase6_fuzzy_controller_baseline",
+  "date": "2026-06-24",
+  "controller": {
+    "name": "deterministic_takagi_sugeno_baseline",
+    "max_bits_per_transition": 4,
+    "stop_threshold": 0.92
+  },
+  "baseline": {
+    "name": "fixed_entropy_threshold",
+    "entropy_threshold": 0.5
+  },
+  "fuzzy": {
+    "cases": 128,
+    "mode_counts": {
+      "COVER": 60,
+      "EMBED": 4,
+      "STOP": 64
+    },
+    "mean_local_payload_bits": 0.0703125,
+    "abstention_rate": 0.96875,
+    "embed_rate": 0.03125
+  },
+  "fixed_threshold": {
+    "cases": 128,
+    "mode_counts": {
+      "COVER": 32,
+      "EMBED": 32,
+      "STOP": 64
+    },
+    "mean_local_payload_bits": 0.875,
+    "abstention_rate": 0.75,
+    "embed_rate": 0.25
+  },
+  "mlp_policy": {
+    "cases": 128,
+    "mode_counts": {
+      "COVER": 36,
+      "EMBED": 4,
+      "PAUSE": 24,
+      "STOP": 64
+    },
+    "mean_local_payload_bits": 0.109375,
+    "abstention_rate": 0.96875,
+    "embed_rate": 0.03125
+  },
+  "real_data": {
+    "tgbl-wiki": {
+      "validation": {
+        "fuzzy": {
+          "cases": 20000,
+          "mode_counts": {
+            "COVER": 14202,
+            "EMBED": 3138,
+            "STOP": 2660
+          },
+          "mean_local_payload_bits": 0.30585,
+          "abstention_rate": 0.8431,
+          "embed_rate": 0.1569
+        },
+        "fixed_threshold": {
+          "cases": 20000,
+          "mode_counts": {
+            "COVER": 5270,
+            "EMBED": 12070,
+            "STOP": 2660
+          },
+          "mean_local_payload_bits": 2.24425,
+          "abstention_rate": 0.3965,
+          "embed_rate": 0.6035
+        },
+        "mlp_policy": {
+          "cases": 20000,
+          "mode_counts": {
+            "COVER": 13169,
+            "EMBED": 51,
+            "PAUSE": 4120,
+            "STOP": 2660
+          },
+          "mean_local_payload_bits": 0.0085,
+          "abstention_rate": 0.99745,
+          "embed_rate": 0.00255
+        },
+        "mean_predictive_entropy": 0.6124506580655412,
+        "mean_channel_fragility": 0.424525
+      },
+      "test": {
+        "fuzzy": {
+          "cases": 20000,
+          "mode_counts": {
+            "COVER": 14341,
+            "EMBED": 3127,
+            "STOP": 2532
+          },
+          "mean_local_payload_bits": 0.3047,
+          "abstention_rate": 0.84365,
+          "embed_rate": 0.15635
+        },
+        "fixed_threshold": {
+          "cases": 20000,
+          "mode_counts": {
+            "COVER": 4728,
+            "EMBED": 12740,
+            "STOP": 2532
+          },
+          "mean_local_payload_bits": 2.3293,
+          "abstention_rate": 0.363,
+          "embed_rate": 0.637
+        },
+        "mlp_policy": {
+          "cases": 20000,
+          "mode_counts": {
+            "COVER": 13254,
+            "EMBED": 42,
+            "PAUSE": 4172,
+            "STOP": 2532
+          },
+          "mean_local_payload_bits": 0.0075,
+          "abstention_rate": 0.9979,
+          "embed_rate": 0.0021
+        },
+        "mean_predictive_entropy": 0.6341195774539808,
+        "mean_channel_fragility": 0.42323
+      }
+    },
+    "mooc": {
+      "validation": {
+        "fuzzy": {
+          "cases": 20000,
+          "mode_counts": {
+            "COVER": 16724,
+            "EMBED": 3263,
+            "STOP": 13
+          },
+          "mean_local_payload_bits": 0.32185,
+          "abstention_rate": 0.83685,
+          "embed_rate": 0.16315
+        },
+        "fixed_threshold": {
+          "cases": 20000,
+          "mode_counts": {
+            "COVER": 96,
+            "EMBED": 19891,
+            "STOP": 13
+          },
+          "mean_local_payload_bits": 2.9771,
+          "abstention_rate": 0.00545,
+          "embed_rate": 0.99455
+        },
+        "mlp_policy": {
+          "cases": 20000,
+          "mode_counts": {
+            "COVER": 15174,
+            "EMBED": 46,
+            "PAUSE": 4767,
+            "STOP": 13
+          },
+          "mean_local_payload_bits": 0.0069,
+          "abstention_rate": 0.9977,
+          "embed_rate": 0.0023
+        },
+        "mean_predictive_entropy": 0.7708717850247333,
+        "mean_channel_fragility": 0.5439200000000001
+      },
+      "test": {
+        "fuzzy": {
+          "cases": 20000,
+          "mode_counts": {
+            "COVER": 16697,
+            "EMBED": 3287,
+            "STOP": 16
+          },
+          "mean_local_payload_bits": 0.3233,
+          "abstention_rate": 0.83565,
+          "embed_rate": 0.16435
+        },
+        "fixed_threshold": {
+          "cases": 20000,
+          "mode_counts": {
+            "COVER": 102,
+            "EMBED": 19882,
+            "STOP": 16
+          },
+          "mean_local_payload_bits": 2.97405,
+          "abstention_rate": 0.0059,
+          "embed_rate": 0.9941
+        },
+        "mlp_policy": {
+          "cases": 20000,
+          "mode_counts": {
+            "COVER": 15152,
+            "EMBED": 20,
+            "PAUSE": 4812,
+            "STOP": 16
+          },
+          "mean_local_payload_bits": 0.003,
+          "abstention_rate": 0.999,
+          "embed_rate": 0.001
+        },
+        "mean_predictive_entropy": 0.769628683516072,
+        "mean_channel_fragility": 0.545035
+      }
+    },
+    "lastfm": {
+      "validation": {
+        "fuzzy": {
+          "cases": 20000,
+          "mode_counts": {
+            "COVER": 13876,
+            "EMBED": 6121,
+            "STOP": 3
+          },
+          "mean_local_payload_bits": 0.6137,
+          "abstention_rate": 0.69395,
+          "embed_rate": 0.30605
+        },
+        "fixed_threshold": {
+          "cases": 20000,
+          "mode_counts": {
+            "COVER": 5,
+            "EMBED": 19992,
+            "STOP": 3
+          },
+          "mean_local_payload_bits": 3.97205,
+          "abstention_rate": 0.0004,
+          "embed_rate": 0.9996
+        },
+        "mlp_policy": {
+          "cases": 20000,
+          "mode_counts": {
+            "COVER": 14874,
+            "EMBED": 319,
+            "PAUSE": 4804,
+            "STOP": 3
+          },
+          "mean_local_payload_bits": 0.05685,
+          "abstention_rate": 0.98405,
+          "embed_rate": 0.01595
+        },
+        "mean_predictive_entropy": 0.9835542328324178,
+        "mean_channel_fragility": 0.540205
+      },
+      "test": {
+        "fuzzy": {
+          "cases": 20000,
+          "mode_counts": {
+            "COVER": 13909,
+            "EMBED": 6090,
+            "STOP": 1
+          },
+          "mean_local_payload_bits": 0.61935,
+          "abstention_rate": 0.6955,
+          "embed_rate": 0.3045
+        },
+        "fixed_threshold": {
+          "cases": 20000,
+          "mode_counts": {
+            "COVER": 22,
+            "EMBED": 19977,
+            "STOP": 1
+          },
+          "mean_local_payload_bits": 3.95845,
+          "abstention_rate": 0.00115,
+          "embed_rate": 0.99885
+        },
+        "mlp_policy": {
+          "cases": 20000,
+          "mode_counts": {
+            "COVER": 14886,
+            "EMBED": 351,
+            "PAUSE": 4762,
+            "STOP": 1
+          },
+          "mean_local_payload_bits": 0.0614,
+          "abstention_rate": 0.98245,
+          "embed_rate": 0.01755
+        },
+        "mean_predictive_entropy": 0.9806783581714424,
+        "mean_channel_fragility": 0.5379950000000001
+      }
+    },
+    "geolife_cells": {
+      "validation": {
+        "fuzzy": {
+          "cases": 20000,
+          "mode_counts": {
+            "COVER": 19895,
+            "STOP": 105
+          },
+          "mean_local_payload_bits": 0.0,
+          "abstention_rate": 1.0,
+          "embed_rate": 0.0
+        },
+        "fixed_threshold": {
+          "cases": 20000,
+          "mode_counts": {
+            "COVER": 19349,
+            "EMBED": 546,
+            "STOP": 105
+          },
+          "mean_local_payload_bits": 0.0819,
+          "abstention_rate": 0.9727,
+          "embed_rate": 0.0273
+        },
+        "mlp_policy": {
+          "cases": 20000,
+          "mode_counts": {
+            "COVER": 17097,
+            "PAUSE": 2798,
+            "STOP": 105
+          },
+          "mean_local_payload_bits": 0.0,
+          "abstention_rate": 1.0,
+          "embed_rate": 0.0
+        },
+        "mean_predictive_entropy": 0.055127062353553365,
+        "mean_channel_fragility": 0.06420500000000001
+      },
+      "test": {
+        "fuzzy": {
+          "cases": 20000,
+          "mode_counts": {
+            "COVER": 20000
+          },
+          "mean_local_payload_bits": 0.0,
+          "abstention_rate": 1.0,
+          "embed_rate": 0.0
+        },
+        "fixed_threshold": {
+          "cases": 20000,
+          "mode_counts": {
+            "COVER": 15995,
+            "EMBED": 4005
+          },
+          "mean_local_payload_bits": 0.60075,
+          "abstention_rate": 0.79975,
+          "embed_rate": 0.20025
+        },
+        "mlp_policy": {
+          "cases": 20000,
+          "mode_counts": {
+            "COVER": 16426,
+            "PAUSE": 3574
+          },
+          "mean_local_payload_bits": 0.0,
+          "abstention_rate": 1.0,
+          "embed_rate": 0.0
+        },
+        "mean_predictive_entropy": 0.17648968644337112,
+        "mean_channel_fragility": 0.15108000000000002
+      }
+    },
+    "t_drive_cells": {
+      "validation": {
+        "fuzzy": {
+          "cases": 20000,
+          "mode_counts": {
+            "COVER": 13506,
+            "EMBED": 6189,
+            "STOP": 305
+          },
+          "mean_local_payload_bits": 0.5136,
+          "abstention_rate": 0.69055,
+          "embed_rate": 0.30945
+        },
+        "fixed_threshold": {
+          "cases": 20000,
+          "mode_counts": {
+            "COVER": 4762,
+            "EMBED": 14933,
+            "STOP": 305
+          },
+          "mean_local_payload_bits": 2.5636,
+          "abstention_rate": 0.25335,
+          "embed_rate": 0.74665
+        },
+        "mlp_policy": {
+          "cases": 20000,
+          "mode_counts": {
+            "COVER": 15944,
+            "EMBED": 508,
+            "PAUSE": 3243,
+            "STOP": 305
+          },
+          "mean_local_payload_bits": 0.07565,
+          "abstention_rate": 0.9746,
+          "embed_rate": 0.0254
+        },
+        "mean_predictive_entropy": 0.7016029190074331,
+        "mean_channel_fragility": 0.348715
+      },
+      "test": {
+        "fuzzy": {
+          "cases": 20000,
+          "mode_counts": {
+            "COVER": 13840,
+            "EMBED": 5926,
+            "STOP": 234
+          },
+          "mean_local_payload_bits": 0.5089,
+          "abstention_rate": 0.7037,
+          "embed_rate": 0.2963
+        },
+        "fixed_threshold": {
+          "cases": 20000,
+          "mode_counts": {
+            "COVER": 4950,
+            "EMBED": 14816,
+            "STOP": 234
+          },
+          "mean_local_payload_bits": 2.5968,
+          "abstention_rate": 0.2592,
+          "embed_rate": 0.7408
+        },
+        "mlp_policy": {
+          "cases": 20000,
+          "mode_counts": {
+            "COVER": 15998,
+            "EMBED": 528,
+            "PAUSE": 3240,
+            "STOP": 234
+          },
+          "mean_local_payload_bits": 0.07885,
+          "abstention_rate": 0.9736,
+          "embed_rate": 0.0264
+        },
+        "mean_predictive_entropy": 0.7148446370139308,
+        "mean_channel_fragility": 0.35475000000000007
+      }
+    }
+  }
+}

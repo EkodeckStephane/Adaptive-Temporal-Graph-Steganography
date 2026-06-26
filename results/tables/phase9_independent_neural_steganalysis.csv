@@ -1,0 +1,11 @@
+dataset,detector,auc,balanced_accuracy,eer
+tgbl-wiki,temporal_graph_eve,0.5194430859375,0.5150625,0.49049999999999994
+tgbl-wiki,sequence_transformer_eve,0.5292041484375001,0.51575,0.4831875
+mooc,temporal_graph_eve,0.5001866484374999,0.5001875,0.499875
+mooc,sequence_transformer_eve,0.4998985156250001,0.4999375,0.5000625
+lastfm,temporal_graph_eve,0.4999999921875001,0.5,0.5
+lastfm,sequence_transformer_eve,0.49999999999999994,0.5,0.5
+geolife_cells,temporal_graph_eve,0.5,0.5,0.5
+geolife_cells,sequence_transformer_eve,0.5,0.5,0.5
+t_drive_cells,temporal_graph_eve,0.50033684375,0.498625,0.5
+t_drive_cells,sequence_transformer_eve,0.4996386640625,0.5008125,0.500375

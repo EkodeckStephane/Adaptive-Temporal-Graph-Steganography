@@ -1,0 +1,76 @@
+dataset: geolife
+version: '1.3'
+retrieved_on: '2026-06-13'
+source_url: https://www.microsoft.com/en-us/download/details.aspx?id=52367
+license: Microsoft Research License Agreement - Non-Commercial Use Only
+level: A
+observed_trajectories: true
+processed:
+  path: datasets/processed/geolife
+  script: code/scripts/run_phase3_data_pipeline.py
+  columns:
+  - point_id
+  - sequence_id
+  - entity_id
+  - timestamp
+  - latitude
+  - longitude
+  - split
+  files:
+    train:
+      path: datasets/processed/geolife/train.parquet
+      bytes: 204292454
+      sha256: dbf690d47f1c02a736acb677d4a3b8905679f923fe8a123c58973a7acfc09e3c
+    validation:
+      path: datasets/processed/geolife/validation.parquet
+      bytes: 47229630
+      sha256: 73c97a4345c100add0649482fa172e37f9f1abdb1b865b0833d975fec73d6da6
+    test:
+      path: datasets/processed/geolife/test.parquet
+      bytes: 50802971
+      sha256: 54f3f5e8a3f12f5aa6d6b7e6da66d3205926c6ac04bf539c8e46012fdd6f5454
+split:
+  train_end: 1245280534
+  validation_end: 1277521714
+  tie_policy: whole_trajectory_same_split
+statistics:
+  users: 182
+  trajectories: 18668
+  archive_trajectory_files: 18670
+  bundled_guide_reported_trajectories: 17621
+  archive_file_count_difference_from_guide: 1049
+  points: 24867361
+  invalid_points: 1
+  nonmonotonic_steps: 0
+  empty_trajectories: 0
+  boundary_crossing_trajectories: 2
+  boundary_crossing_points: 9616
+  median_points_per_trajectory: 506.0
+  median_duration_seconds: 2527.5
+  median_sampling_interval_seconds: 2.0
+  latitude_min: 1.044024
+  latitude_max: 64.751993
+  longitude_min: -179.9695933
+  longitude_max: 179.9969416
+  split_trajectories:
+    train: 13068
+    validation: 2800
+    test: 2800
+  split_points:
+    train: 16784687
+    validation: 3859147
+    test: 4223527
+  actual_train_trajectory_fraction: 0.7000214270409256
+  actual_validation_trajectory_fraction: 0.1499892864795372
+  actual_test_trajectory_fraction: 0.1499892864795372
+  train_end: 1245280534
+  validation_end: 1277521714
+limitations:
+- Microsoft Research License Agreement restricts use to non-commercial purposes.
+- The archive contains 18,670 PLT files while the bundled guide reports 17,621 trajectories.
+- Spatial graph discretization is intentionally deferred and must be fitted on training
+  data only.
+raw:
+  path: datasets/raw/geolife/Geolife_Trajectories_1.3.zip
+  bytes: 313164406
+  sha256: 1107c5ac064d0a23c8d021a8736a77e53abc75b227062e6260342c6a8d86bdb6

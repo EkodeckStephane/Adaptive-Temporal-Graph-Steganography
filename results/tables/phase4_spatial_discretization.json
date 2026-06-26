@@ -1,0 +1,50 @@
+{
+  "campaign": "phase4_level_a_spatial_discretization",
+  "date": "2026-06-24",
+  "datasets": [
+    {
+      "id": "geolife",
+      "source_directory": "datasets/processed/geolife",
+      "output_path": "datasets\\processed\\geolife_cells\\events.parquet",
+      "max_points_per_split": 100000,
+      "grid": {
+        "cell_size_degrees": 0.01,
+        "latitude_origin": -90.0,
+        "longitude_origin": -180.0
+      },
+      "statistics": {
+        "events": 299766,
+        "cells": 560,
+        "unique_directed_edges": 1518,
+        "self_loop_fraction": 0.9832302529306192,
+        "split_counts": {
+          "test": 99961,
+          "validation": 99922,
+          "train": 99883
+        }
+      }
+    },
+    {
+      "id": "t_drive",
+      "source_directory": "datasets/processed/t_drive",
+      "output_path": "datasets\\processed\\t_drive_cells\\events.parquet",
+      "max_points_per_split": 100000,
+      "grid": {
+        "cell_size_degrees": 0.01,
+        "latitude_origin": -90.0,
+        "longitude_origin": -180.0
+      },
+      "statistics": {
+        "events": 294011,
+        "cells": 4859,
+        "unique_directed_edges": 33287,
+        "self_loop_fraction": 0.6792500960848403,
+        "split_counts": {
+          "validation": 98206,
+          "train": 98166,
+          "test": 97639
+        }
+      }
+    }
+  ]
+}

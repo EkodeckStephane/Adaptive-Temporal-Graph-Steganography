@@ -1,0 +1,60 @@
+dataset: lastfm
+version: jodie_2019
+retrieved_on: '2026-06-13'
+source_url: https://snap.stanford.edu/jodie/lastfm.csv
+license: Stanford SNAP terms - redistribution review pending
+level: B
+observed_trajectories: false
+processed:
+  path: datasets/processed/lastfm/events.parquet
+  script: code/scripts/run_phase3_data_pipeline.py
+  columns:
+  - event_id
+  - source
+  - destination
+  - timestamp
+  - label
+  - sequence_id
+  - split
+  bytes: 7876262
+  sha256: 7dc12b20425e4c7a22aa5651abda3fc7cad5b7e095164145e5ee4f652d6294a1
+split:
+  train_end: 103764818.0
+  validation_end: 120235548.0
+  actual_train_fraction: 0.7000006960002413
+  actual_validation_fraction: 0.14999965199987936
+  actual_test_fraction: 0.14999965199987936
+  tie_policy: same_timestamp_same_split
+statistics:
+  events: 1293103
+  nodes: 1980
+  sources: 980
+  destinations: 1000
+  unique_directed_edges: 154993
+  repeated_edge_fraction: 0.8801387051147511
+  exact_duplicate_fraction: 0.0
+  reciprocal_edge_fraction: 0.0
+  destination_entropy_bits: 9.881120204822402
+  conditional_destination_entropy_bits: 7.033950220111259
+  effective_branching_factor: 131.0478813972623
+  global_inter_event_burstiness: 0.4712738511935195
+  median_source_burstiness: 0.5628462792962157
+  timestamp_min: 0.0
+  timestamp_max: 137107267.0
+  split_counts:
+    train: 905173
+    validation: 193965
+    test: 193965
+  cold_start_nodes:
+    validation: 115
+    test: 179
+  self_loop_fraction: 0.0
+  log_events: 6.111633119273316
+limitations:
+- Level-B interaction stream, not an observed human trajectory dataset.
+- Node namespaces separate users from Wikipedia pages.
+- Edge features remain in the raw archive and are not copied into the canonical table.
+raw:
+  path: datasets/raw/jodie/lastfm.csv
+  bytes: 38770679
+  sha256: 06a917ae03dbd66447616225452f7d610bb6cb2603ea7ee5ef44ddc55044be07

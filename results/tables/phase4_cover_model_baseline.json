@@ -1,0 +1,111 @@
+{
+  "campaign": "phase4_cover_model_baseline",
+  "date": "2026-06-24",
+  "model": {
+    "name": "source_destination_frequency",
+    "prior_strength": 8.0,
+    "training_split": "train",
+    "cold_start_destination": "explicit_unknown_bucket"
+  },
+  "evaluation": {
+    "task": "next_destination_probability",
+    "calibration_bins": 10,
+    "metrics": [
+      "mean_nll_bits",
+      "perplexity",
+      "top1_accuracy",
+      "expected_calibration_error",
+      "unseen_source_fraction",
+      "unseen_destination_fraction"
+    ]
+  },
+  "datasets": {
+    "tgbl-wiki": {
+      "train": {
+        "rows": 110232,
+        "mean_nll_bits": 1.4117141349085505,
+        "perplexity": 2.6605308548333375,
+        "top1_accuracy": 0.7277741490674214,
+        "expected_calibration_error": 0.1304431074816524,
+        "unseen_source_fraction": 0.0,
+        "unseen_destination_fraction": 0.0
+      },
+      "validation": {
+        "rows": 23621,
+        "mean_nll_bits": 5.682461071449067,
+        "perplexity": 51.35600490900367,
+        "top1_accuracy": 0.4368993692053681,
+        "expected_calibration_error": 0.05422756736152256,
+        "unseen_source_fraction": 0.1430506752466026,
+        "unseen_destination_fraction": 0.12137504762711147
+      },
+      "test": {
+        "rows": 23621,
+        "mean_nll_bits": 6.380046106875474,
+        "perplexity": 83.28854051178457,
+        "top1_accuracy": 0.4059099953431269,
+        "expected_calibration_error": 0.055125135781354986,
+        "unseen_source_fraction": 0.1646839676558994,
+        "unseen_destination_fraction": 0.13018077134752973
+      }
+    },
+    "mooc": {
+      "train": {
+        "rows": 288225,
+        "mean_nll_bits": 4.535145730327579,
+        "perplexity": 23.185416372989675,
+        "top1_accuracy": 0.13377743082661114,
+        "expected_calibration_error": 0.01773897535200215,
+        "unseen_source_fraction": 0.0,
+        "unseen_destination_fraction": 0.0
+      },
+      "validation": {
+        "rows": 61762,
+        "mean_nll_bits": 9.848678150722897,
+        "perplexity": 922.0352845634371,
+        "top1_accuracy": 0.018765584016061657,
+        "expected_calibration_error": 0.08915896033627657,
+        "unseen_source_fraction": 0.10147015964508921,
+        "unseen_destination_fraction": 0.0
+      },
+      "test": {
+        "rows": 61762,
+        "mean_nll_bits": 10.305054622016508,
+        "perplexity": 1265.1165822125433,
+        "top1_accuracy": 0.015365435057154885,
+        "expected_calibration_error": 0.09249771240655284,
+        "unseen_source_fraction": 0.13997279880832875,
+        "unseen_destination_fraction": 0.028982222078300573
+      }
+    },
+    "lastfm": {
+      "train": {
+        "rows": 905173,
+        "mean_nll_bits": 6.948488333424994,
+        "perplexity": 123.51036719791065,
+        "top1_accuracy": 0.05065219576810179,
+        "expected_calibration_error": 0.0005760676771703955,
+        "unseen_source_fraction": 0.0,
+        "unseen_destination_fraction": 0.0
+      },
+      "validation": {
+        "rows": 193965,
+        "mean_nll_bits": 10.761254464424798,
+        "perplexity": 1735.6429347277333,
+        "top1_accuracy": 0.015734797515015594,
+        "expected_calibration_error": 0.03738888622142195,
+        "unseen_source_fraction": 0.07736447297192793,
+        "unseen_destination_fraction": 0.042847936483386174
+      },
+      "test": {
+        "rows": 193965,
+        "mean_nll_bits": 12.37805208919109,
+        "perplexity": 5323.104189558163,
+        "top1_accuracy": 0.009635759028690743,
+        "expected_calibration_error": 0.030230670073608263,
+        "unseen_source_fraction": 0.3301523470729255,
+        "unseen_destination_fraction": 0.2017374268553605
+      }
+    }
+  }
+}

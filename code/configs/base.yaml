@@ -1,0 +1,78 @@
+project:
+  seed: 20260612
+  deterministic: true
+
+data:
+  dataset: porto_taxi
+  dataset_level: A
+  real_world_only: true
+  temporal_split: true
+  observed_trajectories_required: true
+
+model:
+  graph_encoder: tgn
+  sequence_model: gru
+  hidden_dim: 128
+  num_layers: 2
+  dropout: 0.1
+
+stego:
+  # Current implementation offers two distribution-coupling backends:
+  #   - quantized_interval: uniform dyadic intervals (legacy baseline)
+  #   - range: probability-proportional dyadic intervals (lower KL/TV)
+  # and two error-correction options:
+  #   - repetition3: simple repetition code
+  #   - reed_solomon: Reed-Solomon block code via reedsolo
+  coder: distribution_coupling
+  coder_backend: range
+  encryption: aes_gcm
+  error_correction: reed_solomon
+  error_correction_nsym: 10
+  topology_modification: false
+  topology_modification: false
+  max_bits_per_transition: 4
+  actions:
+    - embed
+    - cover
+    - pause
+    - stop
+  deterministic_probability_precision: 24
+  synchronization_failure: abort
+
+fuzzy:
+  enabled: true
+  type: takagi_sugeno
+  inputs:
+    - predictive_entropy
+    - calibration_uncertainty
+    - steganalysis_risk
+    - payload_pressure
+    - dead_end_risk
+    - channel_fragility
+  outputs:
+    - local_payload_bits
+    - abstention_mode
+
+risk_cost:
+  negative_log_probability: 1.0
+  steganalysis: 1.0
+  channel_fragility: 0.5
+  calibration: 0.5
+
+constraints:
+  max_external_auc: 0.60
+  max_corrected_ber: 0.001
+  passive_ber: 0.0
+  minimum_real_domains: 3
+
+evaluation:
+  seeds: [11, 23, 37, 53, 71]
+  confidence_level: 0.95
+  ablations:
+    - static_vs_temporal
+    - no_gru
+    - fixed_vs_entropy_coding
+    - fixed_threshold_vs_fuzzy
+    - fuzzy_vs_mlp
+    - no_abstention
+    - no_steganalysis_risk

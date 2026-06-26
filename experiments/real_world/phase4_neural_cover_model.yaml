@@ -1,0 +1,23 @@
+campaign: phase4_neural_cover_model
+date: 2026-06-26
+datasets:
+  - tgbl-wiki
+  - geolife_cells
+  - t_drive_cells
+event_datasets:
+  - id: geolife_cells
+    processed_path: datasets/processed/geolife_cells/events.parquet
+  - id: t_drive_cells
+    processed_path: datasets/processed/t_drive_cells/events.parquet
+max_rows_per_split: 5000
+models:
+  - gru
+  - transformer
+training:
+  context_length: 8
+  embedding_dim: 32
+  hidden_dim: 64
+  epochs: 1
+  batch_size: 128
+  learning_rate: 0.003
+  seed: 20260626

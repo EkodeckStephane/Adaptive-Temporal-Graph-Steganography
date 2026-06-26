@@ -1,0 +1,19 @@
+campaign: phase8_robustness_and_ablations
+date: 2026-06-26
+input_records: results/tables/phase7_steganalysis_records.csv
+detectors:
+  - linear
+  - forest
+  - mlp
+attacks:
+  - none
+  - subsample_80
+  - truncate_50
+  - timestamp_noise
+ablations:
+  - full
+  - no_probability
+  - no_entropy
+  - no_cold_start
+  - no_temporal
+seed: 20260626

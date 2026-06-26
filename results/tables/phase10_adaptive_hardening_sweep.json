@@ -1,0 +1,112 @@
+{
+  "dataset": "t_drive_cells",
+  "best_feasible": [
+    {
+      "dataset": "t_drive_cells",
+      "name": "range_one_bit",
+      "max_bits_per_transition": 1,
+      "min_encoded_probability": 0.0,
+      "max_encoded_rank_fraction": 1.0,
+      "max_encoded_surprise_bits": Infinity,
+      "auc": 0.5450747499999999,
+      "auc_ci_low": 0.5372315797313411,
+      "auc_ci_high": 0.5536130381877176,
+      "balanced_accuracy": 0.5233125,
+      "eer": 0.4766875,
+      "embedding_rate": 0.11225,
+      "bits_per_transition": 0.11225
+    },
+    {
+      "dataset": "t_drive_cells",
+      "name": "selected_rank_half",
+      "max_bits_per_transition": 1,
+      "min_encoded_probability": 0.0,
+      "max_encoded_rank_fraction": 0.5,
+      "max_encoded_surprise_bits": Infinity,
+      "auc": 0.5360749453125001,
+      "auc_ci_low": 0.5281737976389665,
+      "auc_ci_high": 0.5425479718952092,
+      "balanced_accuracy": 0.5185625,
+      "eer": 0.48143749999999996,
+      "embedding_rate": 0.096125,
+      "bits_per_transition": 0.096125
+    },
+    {
+      "dataset": "t_drive_cells",
+      "name": "strict_rank_quarter",
+      "max_bits_per_transition": 1,
+      "min_encoded_probability": 0.0,
+      "max_encoded_rank_fraction": 0.25,
+      "max_encoded_surprise_bits": Infinity,
+      "auc": 0.5197675625,
+      "auc_ci_low": 0.5129502960364504,
+      "auc_ci_high": 0.5301271788586389,
+      "balanced_accuracy": 0.5101249999999999,
+      "eer": 0.489875,
+      "embedding_rate": 0.068,
+      "bits_per_transition": 0.068
+    }
+  ],
+  "all": [
+    {
+      "dataset": "t_drive_cells",
+      "name": "previous_high_payload",
+      "max_bits_per_transition": 2,
+      "min_encoded_probability": 0.0,
+      "max_encoded_rank_fraction": 1.0,
+      "max_encoded_surprise_bits": Infinity,
+      "auc": 0.615104078125,
+      "auc_ci_low": 0.6085115776046022,
+      "auc_ci_high": 0.621963151555022,
+      "balanced_accuracy": 0.5625625000000001,
+      "eer": 0.4374375,
+      "embedding_rate": 0.255,
+      "bits_per_transition": 0.4715
+    },
+    {
+      "dataset": "t_drive_cells",
+      "name": "range_one_bit",
+      "max_bits_per_transition": 1,
+      "min_encoded_probability": 0.0,
+      "max_encoded_rank_fraction": 1.0,
+      "max_encoded_surprise_bits": Infinity,
+      "auc": 0.5450747499999999,
+      "auc_ci_low": 0.5372315797313411,
+      "auc_ci_high": 0.5536130381877176,
+      "balanced_accuracy": 0.5233125,
+      "eer": 0.4766875,
+      "embedding_rate": 0.11225,
+      "bits_per_transition": 0.11225
+    },
+    {
+      "dataset": "t_drive_cells",
+      "name": "selected_rank_half",
+      "max_bits_per_transition": 1,
+      "min_encoded_probability": 0.0,
+      "max_encoded_rank_fraction": 0.5,
+      "max_encoded_surprise_bits": Infinity,
+      "auc": 0.5360749453125001,
+      "auc_ci_low": 0.5281737976389665,
+      "auc_ci_high": 0.5425479718952092,
+      "balanced_accuracy": 0.5185625,
+      "eer": 0.48143749999999996,
+      "embedding_rate": 0.096125,
+      "bits_per_transition": 0.096125
+    },
+    {
+      "dataset": "t_drive_cells",
+      "name": "strict_rank_quarter",
+      "max_bits_per_transition": 1,
+      "min_encoded_probability": 0.0,
+      "max_encoded_rank_fraction": 0.25,
+      "max_encoded_surprise_bits": Infinity,
+      "auc": 0.5197675625,
+      "auc_ci_low": 0.5129502960364504,
+      "auc_ci_high": 0.5301271788586389,
+      "balanced_accuracy": 0.5101249999999999,
+      "eer": 0.489875,
+      "embedding_rate": 0.068,
+      "bits_per_transition": 0.068
+    }
+  ]
+}

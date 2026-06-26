@@ -1,0 +1,25 @@
+campaign: phase5_codec_baseline
+date: 2026-06-24
+message: "phase-five-six"
+key_id: deterministic_test_key
+coder:
+  name: quantized_interval_distribution_coupling
+  max_bits_per_transition: 2
+  error_correction: repetition3
+  authentication: aes_gcm_128_tag
+  whitening: aes_gcm_stream
+  deterministic_nonce_hex: "000102030405060708090a0b"
+candidate_distribution:
+  actions:
+    - [a, 0.40]
+    - [b, 0.30]
+    - [c, 0.20]
+    - [d, 0.10]
+evaluation:
+  metrics:
+    - useful_bits_per_transition
+    - attempted_bits_per_transition
+    - local_total_variation_sum
+    - passive_ber
+    - corrected_ber
+    - authentication_success

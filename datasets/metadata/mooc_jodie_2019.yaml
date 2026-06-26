@@ -1,0 +1,60 @@
+dataset: mooc
+version: jodie_2019
+retrieved_on: '2026-06-13'
+source_url: https://snap.stanford.edu/jodie/mooc.csv
+license: Stanford SNAP terms - redistribution review pending
+level: B
+observed_trajectories: false
+processed:
+  path: datasets/processed/mooc/events.parquet
+  script: code/scripts/run_phase3_data_pipeline.py
+  columns:
+  - event_id
+  - source
+  - destination
+  - timestamp
+  - label
+  - sequence_id
+  - split
+  bytes: 2408475
+  sha256: d8ee4eb3a63219ca59b05b461028d09efdbb68a5697f34ac779cbfbb11c856be
+split:
+  train_end: 1917241.0
+  validation_end: 2250152.0
+  actual_train_fraction: 0.7000017000648453
+  actual_validation_fraction: 0.14999914996757732
+  actual_test_fraction: 0.14999914996757732
+  tie_policy: same_timestamp_same_split
+statistics:
+  events: 411749
+  nodes: 7144
+  sources: 7047
+  destinations: 97
+  unique_directed_edges: 178443
+  repeated_edge_fraction: 0.5666218982924063
+  exact_duplicate_fraction: 0.00013114785949692654
+  reciprocal_edge_fraction: 0.0
+  destination_entropy_bits: 5.92725275273353
+  conditional_destination_entropy_bits: 4.87995143119827
+  effective_branching_factor: 29.445013527272163
+  global_inter_event_burstiness: 0.811433425632241
+  median_source_burstiness: 0.5773085939985644
+  timestamp_min: 0.0
+  timestamp_max: 2572086.0
+  split_counts:
+    train: 288225
+    validation: 61762
+    test: 61762
+  cold_start_nodes:
+    validation: 292
+    test: 352
+  self_loop_fraction: 0.0
+  log_events: 5.614632553087671
+limitations:
+- Level-B interaction stream, not an observed human trajectory dataset.
+- Node namespaces separate users from Wikipedia pages.
+- Edge features remain in the raw archive and are not copied into the canonical table.
+raw:
+  path: datasets/raw/jodie/mooc.csv
+  bytes: 41449822
+  sha256: 5e29679063c6e416c2ae741d94a8f2b8e996f21e7cbf278488687fb6cb1df15a

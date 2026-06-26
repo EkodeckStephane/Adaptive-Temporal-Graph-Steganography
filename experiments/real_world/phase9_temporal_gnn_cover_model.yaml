@@ -1,0 +1,23 @@
+campaign: phase9_temporal_gnn_cover_model
+date: 2026-06-26
+datasets:
+  - tgbl-wiki
+  - mooc
+  - lastfm
+  - geolife_cells
+  - t_drive_cells
+event_datasets:
+  - id: geolife_cells
+    processed_path: datasets/processed/geolife_cells/events.parquet
+  - id: t_drive_cells
+    processed_path: datasets/processed/t_drive_cells/events.parquet
+max_rows_per_split: 20000
+training:
+  embedding_dim: 32
+  hidden_dim: 64
+  epochs: 20
+  batch_size: 256
+  learning_rate: 0.003
+  seed: 20260626
+  patience: 5
+  dropout: 0.2

@@ -1,0 +1,159 @@
+{
+  "campaign": "phase4_neural_cover_model",
+  "date": "2026-06-26",
+  "training": {
+    "context_length": 8,
+    "embedding_dim": 32,
+    "hidden_dim": 64,
+    "epochs": 1,
+    "batch_size": 128,
+    "learning_rate": 0.003,
+    "seed": 20260626
+  },
+  "datasets": {
+    "tgbl-wiki": {
+      "gru": {
+        "train": {
+          "rows": 5000,
+          "mean_nll_bits": 4.768021583557129,
+          "perplexity": 27.24692627478559,
+          "top1_accuracy": 0.4838,
+          "unknown_target_fraction": 0.0
+        },
+        "validation": {
+          "rows": 5000,
+          "mean_nll_bits": 9.572437286376953,
+          "perplexity": 761.3612245533678,
+          "top1_accuracy": 0.0452,
+          "unknown_target_fraction": 0.663
+        },
+        "test": {
+          "rows": 5000,
+          "mean_nll_bits": 9.601347923278809,
+          "perplexity": 776.7722886348843,
+          "top1_accuracy": 0.0334,
+          "unknown_target_fraction": 0.6522
+        }
+      },
+      "transformer": {
+        "train": {
+          "rows": 5000,
+          "mean_nll_bits": 5.188212871551514,
+          "perplexity": 36.45924728415108,
+          "top1_accuracy": 0.4778,
+          "unknown_target_fraction": 0.0
+        },
+        "validation": {
+          "rows": 5000,
+          "mean_nll_bits": 10.004791259765625,
+          "perplexity": 1027.406406644072,
+          "top1_accuracy": 0.0354,
+          "unknown_target_fraction": 0.663
+        },
+        "test": {
+          "rows": 5000,
+          "mean_nll_bits": 10.061891555786133,
+          "perplexity": 1068.8854648900442,
+          "top1_accuracy": 0.0274,
+          "unknown_target_fraction": 0.6522
+        }
+      }
+    },
+    "geolife_cells": {
+      "gru": {
+        "train": {
+          "rows": 5000,
+          "mean_nll_bits": 0.40337345004081726,
+          "perplexity": 1.3225969227764294,
+          "top1_accuracy": 0.9572,
+          "unknown_target_fraction": 0.0
+        },
+        "validation": {
+          "rows": 5000,
+          "mean_nll_bits": 0.5281810760498047,
+          "perplexity": 1.4421098627043822,
+          "top1_accuracy": 0.9276,
+          "unknown_target_fraction": 0.0538
+        },
+        "test": {
+          "rows": 5000,
+          "mean_nll_bits": 3.473273515701294,
+          "perplexity": 11.1060471106687,
+          "top1_accuracy": 0.4194,
+          "unknown_target_fraction": 0.578
+        }
+      },
+      "transformer": {
+        "train": {
+          "rows": 5000,
+          "mean_nll_bits": 0.4878036677837372,
+          "perplexity": 1.4023084015419027,
+          "top1_accuracy": 0.956,
+          "unknown_target_fraction": 0.0
+        },
+        "validation": {
+          "rows": 5000,
+          "mean_nll_bits": 0.6901318430900574,
+          "perplexity": 1.6134309577834496,
+          "top1_accuracy": 0.9312,
+          "unknown_target_fraction": 0.0538
+        },
+        "test": {
+          "rows": 5000,
+          "mean_nll_bits": 4.67482852935791,
+          "perplexity": 25.5425123432166,
+          "top1_accuracy": 0.419,
+          "unknown_target_fraction": 0.578
+        }
+      }
+    },
+    "t_drive_cells": {
+      "gru": {
+        "train": {
+          "rows": 5000,
+          "mean_nll_bits": 6.947213649749756,
+          "perplexity": 123.40128862360817,
+          "top1_accuracy": 0.2674,
+          "unknown_target_fraction": 0.0
+        },
+        "validation": {
+          "rows": 5000,
+          "mean_nll_bits": 10.092401504516602,
+          "perplexity": 1091.7308460354377,
+          "top1_accuracy": 0.0304,
+          "unknown_target_fraction": 0.5586
+        },
+        "test": {
+          "rows": 5000,
+          "mean_nll_bits": 10.182670593261719,
+          "perplexity": 1162.22251511078,
+          "top1_accuracy": 0.0286,
+          "unknown_target_fraction": 0.5828
+        }
+      },
+      "transformer": {
+        "train": {
+          "rows": 5000,
+          "mean_nll_bits": 7.3421196937561035,
+          "perplexity": 162.25506381658008,
+          "top1_accuracy": 0.2646,
+          "unknown_target_fraction": 0.0
+        },
+        "validation": {
+          "rows": 5000,
+          "mean_nll_bits": 10.330917358398438,
+          "perplexity": 1288.0004287847717,
+          "top1_accuracy": 0.036,
+          "unknown_target_fraction": 0.5586
+        },
+        "test": {
+          "rows": 5000,
+          "mean_nll_bits": 10.408391952514648,
+          "perplexity": 1359.0586039218542,
+          "top1_accuracy": 0.0274,
+          "unknown_target_fraction": 0.5828
+        }
+      }
+    }
+  }
+}

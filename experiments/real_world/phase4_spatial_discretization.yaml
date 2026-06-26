@@ -1,0 +1,15 @@
+campaign: phase4_level_a_spatial_discretization
+date: 2026-06-24
+grid:
+  cell_size_degrees: 0.01
+  latitude_origin: -90.0
+  longitude_origin: -180.0
+max_points_per_split: 100000
+batch_size: 50000
+datasets:
+  - id: geolife
+    processed_directory: datasets/processed/geolife
+    output_directory: datasets/processed/geolife_cells
+  - id: t_drive
+    processed_directory: datasets/processed/t_drive
+    output_directory: datasets/processed/t_drive_cells

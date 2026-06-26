@@ -1,0 +1,13 @@
+campaign: phase4_level_a_spatial_sensitivity
+date: 2026-06-26
+grid:
+  cell_size_degrees: [0.005, 0.01, 0.02]
+  latitude_origin: -90.0
+  longitude_origin: -180.0
+max_points_per_split: 50000
+batch_size: 50000
+datasets:
+  - id: geolife
+    processed_directory: datasets/processed/geolife
+  - id: t_drive
+    processed_directory: datasets/processed/t_drive

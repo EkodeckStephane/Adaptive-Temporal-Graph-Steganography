@@ -1,0 +1,48 @@
+{
+  "campaign": "phase6_fuzzy_weight_optimization",
+  "date": "2026-06-24",
+  "best_weights": {
+    "opportunity_entropy_weight": 0.4839073723180716,
+    "opportunity_payload_weight": 0.020273335683757665,
+    "cover_entropy_weight": 0.7184772201699092,
+    "pause_risk_weight": 0.6199228879155457,
+    "stop_dead_end_weight": 0.35575501472942994,
+    "abstention_cover_weight": 0.4489223012271798,
+    "abstention_pause_weight": 0.33465306815624035,
+    "abstention_stop_weight": 0.7862137777234286
+  },
+  "best_objective": 0.02968750000000002,
+  "baseline_fuzzy": {
+    "cases": 128,
+    "mode_counts": {
+      "COVER": 60,
+      "EMBED": 4,
+      "STOP": 64
+    },
+    "mean_local_payload_bits": 0.0703125,
+    "abstention_rate": 0.96875,
+    "embed_rate": 0.03125
+  },
+  "optimized_fuzzy": {
+    "cases": 128,
+    "mode_counts": {
+      "COVER": 60,
+      "EMBED": 4,
+      "STOP": 64
+    },
+    "mean_local_payload_bits": 0.109375,
+    "abstention_rate": 0.96875,
+    "embed_rate": 0.03125
+  },
+  "fixed_threshold": {
+    "cases": 128,
+    "mode_counts": {
+      "COVER": 32,
+      "EMBED": 32,
+      "STOP": 64
+    },
+    "mean_local_payload_bits": 0.875,
+    "abstention_rate": 0.75,
+    "embed_rate": 0.25
+  }
+}

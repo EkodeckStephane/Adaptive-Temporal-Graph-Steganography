@@ -1,0 +1,27 @@
+{
+  "campaign": "phase5_codec_baseline",
+  "date": "2026-06-24",
+  "coder": {
+    "name": "quantized_interval_distribution_coupling",
+    "max_bits_per_transition": 2,
+    "error_correction": "repetition3",
+    "authentication": "aes_gcm_128_tag",
+    "whitening": "aes_gcm_stream",
+    "deterministic_nonce_hex": "000102030405060708090a0b"
+  },
+  "message_bytes": 14,
+  "protected_bits": 112,
+  "coded_bits": 336,
+  "transitions": 168,
+  "unique_candidate_orders": 4,
+  "useful_bits_per_transition": 0.6666666666666666,
+  "attempted_bits_per_transition": 2.0,
+  "local_total_variation_sum": 33.59999999999994,
+  "local_kl_bits_sum": 29.51549491078843,
+  "mean_local_total_variation": 0.19999999999999962,
+  "mean_local_kl_bits": 0.175687469707074,
+  "passive_ber": 0.0,
+  "corrected_ber": 0.0,
+  "authentication_success": true,
+  "mode": "EMBED_only_codec_contract"
+}

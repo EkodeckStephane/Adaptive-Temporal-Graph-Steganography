@@ -1,0 +1,146 @@
+{
+  "campaign": "phase2_lee_reproduction",
+  "date": "2026-06-13",
+  "seed": 1234,
+  "source": {
+    "repository": "https://github.com/dwgoon/hmg",
+    "commit": "b7499454be42aa24b61825b2f87f9083539b02fa",
+    "dataset": "terrorists-911",
+    "dataset_kind": "real_observed_network",
+    "directed": true,
+    "path": "literature\\external\\lee_hmg_snapshot\\data\\test\\terrorists-911\\edges.csv",
+    "sha256": "0897b4df9fcddbb3ed42b04e4188dde1d72de0f72011d56f54d55315bfeb03a4",
+    "nodes": 62,
+    "edges": 152,
+    "edge_type_counts": {
+      "00": 51,
+      "01": 39,
+      "10": 37,
+      "11": 25
+    },
+    "bind_balanced_capacity_bits": 200
+  },
+  "bind": [
+    {
+      "message_bytes": 8,
+      "payload_bits": 64,
+      "header_bits": 16,
+      "payload_bpe": 0.42105263157894735,
+      "selected_edge_fraction": 0.2631578947368421,
+      "roundtrip_exact": true,
+      "edge_multiset_preserved": true
+    },
+    {
+      "message_bytes": 16,
+      "payload_bits": 128,
+      "header_bits": 16,
+      "payload_bpe": 0.8421052631578947,
+      "selected_edge_fraction": 0.47368421052631576,
+      "roundtrip_exact": true,
+      "edge_multiset_preserved": true
+    },
+    {
+      "message_bytes": 24,
+      "payload_bits": 192,
+      "header_bits": 16,
+      "payload_bpe": 1.263157894736842,
+      "selected_edge_fraction": 0.6842105263157895,
+      "roundtrip_exact": true,
+      "edge_multiset_preserved": true
+    }
+  ],
+  "adabind": {
+    "message_bytes": 8,
+    "added_edges": 7,
+    "iterations": 7,
+    "final_edges": 159,
+    "topology_modified": true,
+    "payload_bpe": 0.4025157232704403,
+    "roundtrip_exact": true,
+    "final_l1_distance": 2
+  },
+  "bynis": [
+    {
+      "message_bytes": 18,
+      "message_edges_with_header": 20,
+      "extra_edges": 0,
+      "total_edges": 20,
+      "payload_bpe": 7.2,
+      "roundtrip_exact": true
+    },
+    {
+      "message_bytes": 18,
+      "message_edges_with_header": 20,
+      "extra_edges": 50,
+      "total_edges": 70,
+      "payload_bpe": 2.057142857142857,
+      "roundtrip_exact": true
+    }
+  ],
+  "reordering_attack": [
+    {
+      "adjacent_swaps": 1,
+      "edge_fraction_touched": 0.013157894736842105,
+      "trials": 100,
+      "mean_ber": 0.116328125,
+      "std_ber": 0.31232218544337054,
+      "exact_recovery_rate": 0.42,
+      "decode_failure_rate": 0.05
+    },
+    {
+      "adjacent_swaps": 2,
+      "edge_fraction_touched": 0.02631578947368421,
+      "trials": 100,
+      "mean_ber": 0.1609375,
+      "std_ber": 0.35438419400451154,
+      "exact_recovery_rate": 0.24,
+      "decode_failure_rate": 0.09
+    },
+    {
+      "adjacent_swaps": 4,
+      "edge_fraction_touched": 0.05263157894736842,
+      "trials": 100,
+      "mean_ber": 0.319921875,
+      "std_ber": 0.4476321757192938,
+      "exact_recovery_rate": 0.03,
+      "decode_failure_rate": 0.2
+    },
+    {
+      "adjacent_swaps": 8,
+      "edge_fraction_touched": 0.10526315789473684,
+      "trials": 100,
+      "mean_ber": 0.50625,
+      "std_ber": 0.477015717386585,
+      "exact_recovery_rate": 0.0,
+      "decode_failure_rate": 0.3
+    },
+    {
+      "adjacent_swaps": 16,
+      "edge_fraction_touched": 0.21052631578947367,
+      "trials": 100,
+      "mean_ber": 0.845625,
+      "std_ber": 0.342997914635708,
+      "exact_recovery_rate": 0.0,
+      "decode_failure_rate": 0.57
+    }
+  ],
+  "walks": {
+    "uniform": {
+      "length": 64,
+      "unique_nodes": 31,
+      "unique_ratio": 0.484375,
+      "immediate_return_rate": 0.20967741935483872
+    },
+    "node2vec": {
+      "length": 64,
+      "unique_nodes": 21,
+      "unique_ratio": 0.328125,
+      "immediate_return_rate": 0.3064516129032258
+    },
+    "deepwalk": {
+      "corpus_walks": 248,
+      "mean_length": 64.0,
+      "mean_unique_ratio": 0.42288306451612906
+    }
+  }
+}

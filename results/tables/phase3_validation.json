@@ -1,0 +1,63 @@
+{
+  "tgbl-wiki": {
+    "rows": 157474
+  },
+  "geolife": {
+    "rows": {
+      "train": 16784687,
+      "validation": 3859147,
+      "test": 4223527
+    },
+    "ranges": {
+      "train": [
+        946768339,
+        1245279147
+      ],
+      "validation": [
+        1245281301,
+        1277472517
+      ],
+      "test": [
+        1277533022,
+        1343377880
+      ]
+    },
+    "sequence_counts": {
+      "train": 13068,
+      "validation": 2800,
+      "test": 2800
+    }
+  },
+  "t_drive": {
+    "rows": {
+      "train": 7635952,
+      "validation": 1381116,
+      "test": 1038027
+    },
+    "ranges": {
+      "train": [
+        1201959045,
+        1202342399
+      ],
+      "validation": [
+        1202342400,
+        1202428799
+      ],
+      "test": [
+        1202428800,
+        1202492359
+      ]
+    },
+    "sequence_counts": {
+      "train": 161746,
+      "validation": 24529,
+      "test": 25129
+    }
+  },
+  "mooc": {
+    "rows": 411749
+  },
+  "lastfm": {
+    "rows": 1293103
+  }
+}

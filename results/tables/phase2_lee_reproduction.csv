@@ -1,0 +1,7 @@
+added_edges,edge_multiset_preserved,extra_edges,final_edges,final_l1_distance,header_bits,iterations,message_bytes,message_edges_with_header,method,payload_bits,payload_bpe,roundtrip_exact,selected_edge_fraction,topology_modified,total_edges
+,True,,,,16,,8,,BIND,64,0.42105263157894735,True,0.2631578947368421,,
+,True,,,,16,,16,,BIND,128,0.8421052631578947,True,0.47368421052631576,,
+,True,,,,16,,24,,BIND,192,1.263157894736842,True,0.6842105263157895,,
+7,,,159,2,,7,8,,AdaBIND,,0.4025157232704403,True,,True,
+,,0,,,,,18,20,BYNIS,,7.2,True,,,20
+,,50,,,,,18,20,BYNIS,,2.057142857142857,True,,,70

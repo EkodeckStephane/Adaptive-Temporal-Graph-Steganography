@@ -1,0 +1,157 @@
+{
+  "campaign": "phase4_temporal_cover_model",
+  "date": "2026-06-24",
+  "model": {
+    "name": "temporal_source_previous_destination_backoff",
+    "prior_strength": 8.0,
+    "top_k": 32
+  },
+  "max_rows_per_split": 100000,
+  "datasets": {
+    "tgbl-wiki": {
+      "train": {
+        "rows": 100000,
+        "mean_nll_bits": 0.5568024384182559,
+        "perplexity": 1.4710052936960722,
+        "top1_accuracy": 0.87693,
+        "mean_entropy_bits": 0.7080572212035099,
+        "unseen_context_fraction": 0.0,
+        "unseen_destination_fraction": 0.0
+      },
+      "validation": {
+        "rows": 23621,
+        "mean_nll_bits": 4.344454876650981,
+        "perplexity": 20.31473833190704,
+        "top1_accuracy": 0.46035307565302064,
+        "mean_entropy_bits": 1.8309309303560601,
+        "unseen_context_fraction": 0.4060370009737098,
+        "unseen_destination_fraction": 0.19042377545404512
+      },
+      "test": {
+        "rows": 23621,
+        "mean_nll_bits": 4.345018102245915,
+        "perplexity": 20.322670718152718,
+        "top1_accuracy": 0.4308030989373862,
+        "mean_entropy_bits": 1.9404647356690554,
+        "unseen_context_fraction": 0.41738283730578724,
+        "unseen_destination_fraction": 0.16036577621607892
+      }
+    },
+    "mooc": {
+      "train": {
+        "rows": 100000,
+        "mean_nll_bits": 2.3469711122258103,
+        "perplexity": 5.087550155499506,
+        "top1_accuracy": 0.5426,
+        "mean_entropy_bits": 3.261859793660062,
+        "unseen_context_fraction": 0.0,
+        "unseen_destination_fraction": 0.0
+      },
+      "validation": {
+        "rows": 61762,
+        "mean_nll_bits": 10.232804575302525,
+        "perplexity": 1203.3199498538474,
+        "top1_accuracy": 0.01397299310255497,
+        "mean_entropy_bits": 4.054837573125223,
+        "unseen_context_fraction": 0.9539684595706097,
+        "unseen_destination_fraction": 0.6104076940513584
+      },
+      "test": {
+        "rows": 61762,
+        "mean_nll_bits": 10.534243395476118,
+        "perplexity": 1482.9388523784457,
+        "top1_accuracy": 0.011738609500987662,
+        "mean_entropy_bits": 4.043676659375391,
+        "unseen_context_fraction": 0.9597325216152327,
+        "unseen_destination_fraction": 0.6672711375926945
+      }
+    },
+    "lastfm": {
+      "train": {
+        "rows": 100000,
+        "mean_nll_bits": 2.854771211185287,
+        "perplexity": 7.233887748338425,
+        "top1_accuracy": 0.45094,
+        "mean_entropy_bits": 3.704208200297996,
+        "unseen_context_fraction": 0.0,
+        "unseen_destination_fraction": 0.0
+      },
+      "validation": {
+        "rows": 100000,
+        "mean_nll_bits": 6.805898575462107,
+        "perplexity": 111.88699724152386,
+        "top1_accuracy": 0.00731,
+        "mean_entropy_bits": 4.741508759054565,
+        "unseen_context_fraction": 0.91123,
+        "unseen_destination_fraction": 0.28918
+      },
+      "test": {
+        "rows": 100000,
+        "mean_nll_bits": 6.836308565823558,
+        "perplexity": 114.27045007382479,
+        "top1_accuracy": 0.00649,
+        "mean_entropy_bits": 4.74212610387339,
+        "unseen_context_fraction": 0.93619,
+        "unseen_destination_fraction": 0.44997
+      }
+    },
+    "geolife_cells": {
+      "train": {
+        "rows": 99883,
+        "mean_nll_bits": 0.17418380126631347,
+        "perplexity": 1.1283258785169805,
+        "top1_accuracy": 0.975321125717089,
+        "mean_entropy_bits": 0.17669279221330253,
+        "unseen_context_fraction": 0.0,
+        "unseen_destination_fraction": 0.0
+      },
+      "validation": {
+        "rows": 99922,
+        "mean_nll_bits": 2.740184643608337,
+        "perplexity": 6.681558441276837,
+        "top1_accuracy": 0.6807109545445448,
+        "mean_entropy_bits": 1.2241993783595535,
+        "unseen_context_fraction": 0.30578851504173254,
+        "unseen_destination_fraction": 0.30489782029983387
+      },
+      "test": {
+        "rows": 99961,
+        "mean_nll_bits": 3.0313904691609173,
+        "perplexity": 8.175973210675371,
+        "top1_accuracy": 0.6505036964416122,
+        "mean_entropy_bits": 1.404150414234355,
+        "unseen_context_fraction": 0.3480157261331919,
+        "unseen_destination_fraction": 0.3476355778753714
+      }
+    },
+    "t_drive_cells": {
+      "train": {
+        "rows": 98166,
+        "mean_nll_bits": 1.6979149193077956,
+        "perplexity": 3.244317288109243,
+        "top1_accuracy": 0.6354032964570218,
+        "mean_entropy_bits": 1.9422781515268577,
+        "unseen_context_fraction": 0.0,
+        "unseen_destination_fraction": 0.0
+      },
+      "validation": {
+        "rows": 98206,
+        "mean_nll_bits": 4.369989124837547,
+        "perplexity": 20.677489420873545,
+        "top1_accuracy": 0.337627028898438,
+        "mean_entropy_bits": 3.2464894486479765,
+        "unseen_context_fraction": 0.43947416654786875,
+        "unseen_destination_fraction": 0.3123434413375965
+      },
+      "test": {
+        "rows": 97639,
+        "mean_nll_bits": 4.404601716701754,
+        "perplexity": 21.179574736303213,
+        "top1_accuracy": 0.32327246284783745,
+        "mean_entropy_bits": 3.29864730963026,
+        "unseen_context_fraction": 0.4555044603078688,
+        "unseen_destination_fraction": 0.3283421583588525
+      }
+    }
+  }
+}
